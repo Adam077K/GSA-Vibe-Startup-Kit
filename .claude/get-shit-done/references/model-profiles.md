@@ -6,17 +6,17 @@ Model profiles control which Claude model each GSA agent uses. This allows balan
 
 | Agent | `quality` | `balanced` | `budget` |
 |-------|-----------|------------|----------|
-| gsd-planner | opus | opus | sonnet |
-| gsd-roadmapper | opus | sonnet | sonnet |
-| gsd-executor | opus | sonnet | sonnet |
-| gsd-phase-researcher | opus | sonnet | haiku |
-| gsd-project-researcher | opus | sonnet | haiku |
-| gsd-research-synthesizer | sonnet | sonnet | haiku |
-| gsd-debugger | opus | sonnet | sonnet |
-| gsd-codebase-mapper | sonnet | haiku | haiku |
-| gsd-verifier | sonnet | sonnet | haiku |
-| gsd-plan-checker | sonnet | sonnet | haiku |
-| gsd-integration-checker | sonnet | sonnet | haiku |
+| gsa-planner | opus | opus | sonnet |
+| gsa-roadmapper | opus | sonnet | sonnet |
+| gsa-executor | opus | sonnet | sonnet |
+| gsa-phase-researcher | opus | sonnet | haiku |
+| gsa-project-researcher | opus | sonnet | haiku |
+| gsa-research-synthesizer | sonnet | sonnet | haiku |
+| gsa-debugger | opus | sonnet | sonnet |
+| gsa-codebase-mapper | sonnet | haiku | haiku |
+| gsa-verifier | sonnet | sonnet | haiku |
+| gsa-plan-checker | sonnet | sonnet | haiku |
+| gsa-integration-checker | sonnet | sonnet | haiku |
 
 ## Profile Philosophy
 
@@ -55,8 +55,8 @@ Override specific agents without changing the entire profile:
 {
   "model_profile": "balanced",
   "model_overrides": {
-    "gsd-executor": "opus",
-    "gsd-planner": "haiku"
+    "gsa-executor": "opus",
+    "gsa-planner": "haiku"
   }
 }
 ```
@@ -65,7 +65,7 @@ Overrides take precedence over the profile. Valid values: `opus`, `sonnet`, `hai
 
 ## Switching Profiles
 
-Runtime: `/gsd:set-profile <profile>`
+Runtime: `/gsa:set-profile <profile>`
 
 Per-project default: Set in `.planning/config.json`:
 ```json
@@ -76,16 +76,16 @@ Per-project default: Set in `.planning/config.json`:
 
 ## Design Rationale
 
-**Why Opus for gsd-planner?**
+**Why Opus for gsa-planner?**
 Planning involves architecture decisions, goal decomposition, and task design. This is where model quality has the highest impact.
 
-**Why Sonnet for gsd-executor?**
+**Why Sonnet for gsa-executor?**
 Executors follow explicit PLAN.md instructions. The plan already contains the reasoning; execution is implementation.
 
 **Why Sonnet (not Haiku) for verifiers in balanced?**
 Verification requires goal-backward reasoning - checking if code *delivers* what the phase promised, not just pattern matching. Sonnet handles this well; Haiku may miss subtle gaps.
 
-**Why Haiku for gsd-codebase-mapper?**
+**Why Haiku for gsa-codebase-mapper?**
 Read-only exploration and pattern extraction. No reasoning required, just structured output from file contents.
 
 **Why `inherit` instead of passing `opus` directly?**

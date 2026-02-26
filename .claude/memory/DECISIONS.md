@@ -28,4 +28,13 @@
 
 ---
 
+### [2026-02-27] — GSD → GSA Rebrand
+**Decision:** Renamed all identifiers from GSD to GSA across the codebase (commands, paths, file names, /gsa: slash commands, gsa-tools.cjs, ~/.gsa config dir, gsa/ branch templates).
+**Rationale:** Align naming with GSA (Green Startup Academy) project identity. Exception: `subagent_type` in mcp_task calls remains `gsa-*` (e.g. gsa-planner, gsa-executor) because Cursor's mcp_task tool requires these exact enum values—changing them would break agent spawning.
+**Decided by:** Atlas
+**Affects:** .claude/commands/gsa/, gsa-tools.cjs, hooks, workflows, config defaults
+**Reversible?** Yes (search/replace + file renames)
+
+---
+
 *Add new entries chronologically — newest at the bottom*

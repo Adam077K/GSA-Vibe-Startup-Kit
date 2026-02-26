@@ -1,5 +1,5 @@
 <purpose>
-Validate built features through conversational testing with persistent state. Creates UAT.md that tracks test progress, survives /clear, and feeds gaps into /gsd:plan-phase --gaps.
+Validate built features through conversational testing with persistent state. Creates UAT.md that tracks test progress, survives /clear, and feeds gaps into /gsa:plan-phase --gaps.
 
 User tests, Claude records. One test at a time. Plain text responses.
 </purpose>
@@ -24,7 +24,7 @@ No Pass/Fail buttons. No severity questions. Just: "Here's what should happen. D
 If $ARGUMENTS contains a phase number, load context:
 
 ```bash
-INIT=$(node ./.claude/get-shit-done/bin/gsd-tools.cjs init verify-work "${PHASE_ARG}")
+INIT=$(node ./.claude/get-shit-done/bin/gsa-tools.cjs init verify-work "${PHASE_ARG}")
 ```
 
 Parse JSON for: `planner_model`, `checker_model`, `commit_docs`, `phase_found`, `phase_dir`, `phase_number`, `phase_name`, `has_verification`.
@@ -69,7 +69,7 @@ If no, continue to `create_uat_file`.
 ```
 No active UAT sessions.
 
-Provide a phase number to start testing (e.g., /gsd:verify-work 4)
+Provide a phase number to start testing (e.g., /gsa:verify-work 4)
 ```
 
 **If no active sessions AND $ARGUMENTS provided:**
@@ -292,7 +292,7 @@ Clear Current Test section:
 
 Commit the UAT file:
 ```bash
-node ./.claude/get-shit-done/bin/gsd-tools.cjs commit "test({phase_num}): complete UAT - {passed} passed, {issues} issues" --files ".planning/phases/XX-name/{phase_num}-UAT.md"
+node ./.claude/get-shit-done/bin/gsa-tools.cjs commit "test({phase_num}): complete UAT - {passed} passed, {issues} issues" --files ".planning/phases/XX-name/{phase_num}-UAT.md"
 ```
 
 Present summary:
@@ -317,8 +317,8 @@ Present summary:
 ```
 All tests passed. Ready to continue.
 
-- `/gsd:plan-phase {next}` — Plan next phase
-- `/gsd:execute-phase {next}` — Execute next phase
+- `/gsa:plan-phase {next}` — Plan next phase
+- `/gsa:execute-phase {next}` — Execute next phase
 ```
 </step>
 
@@ -355,7 +355,7 @@ Display:
 ◆ Spawning planner for gap closure...
 ```
 
-Spawn gsd-planner in --gaps mode:
+Spawn gsa-planner in --gaps mode:
 
 ```
 Task(
@@ -374,11 +374,11 @@ Task(
 </planning_context>
 
 <downstream_consumer>
-Output consumed by /gsd:execute-phase
+Output consumed by /gsa:execute-phase
 Plans must be executable prompts.
 </downstream_consumer>
 """,
-  subagent_type="gsd-planner",
+  subagent_type="gsa-planner",
   model="{planner_model}",
   description="Plan gap fixes for Phase {phase}"
 )
@@ -403,7 +403,7 @@ Display:
 
 Initialize: `iteration_count = 1`
 
-Spawn gsd-plan-checker:
+Spawn gsa-plan-checker:
 
 ```
 Task(
@@ -425,7 +425,7 @@ Return one of:
 - ## ISSUES FOUND — structured issue list
 </expected_output>
 """,
-  subagent_type="gsd-plan-checker",
+  subagent_type="gsa-plan-checker",
   model="{checker_model}",
   description="Verify Phase {phase} fix plans"
 )
@@ -443,7 +443,7 @@ On return:
 
 Display: `Sending back to planner for revision... (iteration {N}/3)`
 
-Spawn gsd-planner with revision context:
+Spawn gsa-planner with revision context:
 
 ```
 Task(
@@ -467,7 +467,7 @@ Read existing PLAN.md files. Make targeted updates to address checker issues.
 Do NOT replan from scratch unless issues are fundamental.
 </instructions>
 """,
-  subagent_type="gsd-planner",
+  subagent_type="gsa-planner",
   model="{planner_model}",
   description="Revise Phase {phase} plans"
 )
@@ -483,7 +483,7 @@ Display: `Max iterations reached. {N} issues remain.`
 Offer options:
 1. Force proceed (execute despite issues)
 2. Provide guidance (user gives direction, retry)
-3. Abandon (exit, user runs /gsd:plan-phase manually)
+3. Abandon (exit, user runs /gsa:plan-phase manually)
 
 Wait for user response.
 </step>
@@ -511,7 +511,7 @@ Plans verified and ready for execution.
 
 **Execute fixes** — run fix plans
 
-`/clear` then `/gsd:execute-phase {phase} --gaps-only`
+`/clear` then `/gsa:execute-phase {phase} --gaps-only`
 
 ───────────────────────────────────────────────────────────────
 ```
@@ -562,8 +562,8 @@ Default to **major** if unclear. User can correct if needed.
 - [ ] Batched writes: on issue, every 5 passes, or completion
 - [ ] Committed on completion
 - [ ] If issues: parallel debug agents diagnose root causes
-- [ ] If issues: gsd-planner creates fix plans (gap_closure mode)
-- [ ] If issues: gsd-plan-checker verifies fix plans
+- [ ] If issues: gsa-planner creates fix plans (gap_closure mode)
+- [ ] If issues: gsa-plan-checker verifies fix plans
 - [ ] If issues: revision loop until plans pass (max 3 iterations)
-- [ ] Ready for `/gsd:execute-phase --gaps-only` when complete
+- [ ] Ready for `/gsa:execute-phase --gaps-only` when complete
 </success_criteria>

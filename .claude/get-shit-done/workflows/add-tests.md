@@ -1,7 +1,7 @@
 <purpose>
 Generate unit and E2E tests for a completed phase based on its SUMMARY.md, CONTEXT.md, and implementation. Classifies each changed file into TDD (unit), E2E (browser), or Skip categories, presents a test plan for user approval, then generates tests following RED-GREEN conventions.
 
-Users currently hand-craft `/gsd:quick` prompts for test generation after each phase. This workflow standardizes the process with proper classification, quality gates, and gap reporting.
+Users currently hand-craft `/gsa:quick` prompts for test generation after each phase. This workflow standardizes the process with proper classification, quality gates, and gap reporting.
 </purpose>
 
 <required_reading>
@@ -15,15 +15,15 @@ Parse `$ARGUMENTS` for:
 - Phase number (integer, decimal, or letter-suffix) → store as `$PHASE_ARG`
 - Remaining text after phase number → store as `$EXTRA_INSTRUCTIONS` (optional)
 
-Example: `/gsd:add-tests 12 focus on edge cases` → `$PHASE_ARG=12`, `$EXTRA_INSTRUCTIONS="focus on edge cases"`
+Example: `/gsa:add-tests 12 focus on edge cases` → `$PHASE_ARG=12`, `$EXTRA_INSTRUCTIONS="focus on edge cases"`
 
 If no phase argument provided:
 
 ```
 ERROR: Phase number required
-Usage: /gsd:add-tests <phase> [additional instructions]
-Example: /gsd:add-tests 12
-Example: /gsd:add-tests 12 focus on edge cases in the pricing module
+Usage: /gsa:add-tests <phase> [additional instructions]
+Example: /gsa:add-tests 12
+Example: /gsa:add-tests 12 focus on edge cases in the pricing module
 ```
 
 Exit.
@@ -33,7 +33,7 @@ Exit.
 Load phase operation context:
 
 ```bash
-INIT=$(node ./.claude/get-shit-done/bin/gsd-tools.cjs init phase-op "${PHASE_ARG}")
+INIT=$(node ./.claude/get-shit-done/bin/gsa-tools.cjs init phase-op "${PHASE_ARG}")
 ```
 
 Extract from init JSON: `phase_dir`, `phase_number`, `phase_name`.
@@ -53,7 +53,7 @@ Read the phase artifacts (in order of priority):
 If no SUMMARY.md exists:
 ```
 ERROR: No SUMMARY.md found for phase ${PHASE_ARG}
-This command works on completed phases. Run /gsd:execute-phase first.
+This command works on completed phases. Run /gsa:execute-phase first.
 ```
 Exit.
 
@@ -296,7 +296,7 @@ Create a test coverage report and present to user:
 
 Record test generation in project state:
 ```bash
-node ./.claude/get-shit-done/bin/gsd-tools.cjs state-snapshot
+node ./.claude/get-shit-done/bin/gsa-tools.cjs state-snapshot
 ```
 
 If there are passing tests to commit:
@@ -314,7 +314,7 @@ Present next steps:
 ## ▶ Next Up
 
 {if bugs discovered:}
-**Fix discovered bugs:** `/gsd:quick fix the {N} test failures discovered in phase ${phase_number}`
+**Fix discovered bugs:** `/gsa:quick fix the {N} test failures discovered in phase ${phase_number}`
 
 {if blocked tests:}
 **Resolve test blockers:** {description of what's needed}
@@ -325,8 +325,8 @@ Present next steps:
 ---
 
 **Also available:**
-- `/gsd:add-tests {next_phase}` — test another phase
-- `/gsd:verify-work {phase_number}` — run UAT verification
+- `/gsa:add-tests {next_phase}` — test another phase
+- `/gsa:verify-work {phase_number}` — run UAT verification
 
 ---
 ```

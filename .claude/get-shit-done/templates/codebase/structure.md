@@ -126,7 +126,7 @@ Template for `.planning/codebase/STRUCTURE.md` - captures physical file organiza
 get-shit-done/
 ├── bin/                # Executable entry points
 ├── commands/           # Slash command definitions
-│   └── gsd/           # GSA-specific commands
+│   └── gsa/           # GSA-specific commands
 ├── get-shit-done/     # Skill resources
 │   ├── references/    # Principle documents
 │   ├── templates/     # File templates
@@ -145,7 +145,7 @@ get-shit-done/
 - Key files: install.js - handles npx installation
 - Subdirectories: None
 
-**commands/gsd/**
+**commands/gsa/**
 - Purpose: Slash command definitions for Claude Code
 - Contains: *.md files (one per command)
 - Key files: new-project.md, plan-phase.md, execute-plan.md
@@ -206,7 +206,7 @@ get-shit-done/
 ## Where to Add New Code
 
 **New Slash Command:**
-- Primary code: `commands/gsd/{command-name}.md`
+- Primary code: `commands/gsa/{command-name}.md`
 - Tests: `tests/commands/{command-name}.test.js` (if testing implemented)
 - Documentation: Update `README.md` with new command
 

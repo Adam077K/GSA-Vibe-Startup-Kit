@@ -25,8 +25,8 @@ function cmdInitExecutePhase(cwd, phase, raw) {
 
   const result = {
     // Models
-    executor_model: resolveModelInternal(cwd, 'gsd-executor'),
-    verifier_model: resolveModelInternal(cwd, 'gsd-verifier'),
+    executor_model: resolveModelInternal(cwd, 'gsa-executor'),
+    verifier_model: resolveModelInternal(cwd, 'gsa-verifier'),
 
     // Config flags
     commit_docs: config.commit_docs,
@@ -97,9 +97,9 @@ function cmdInitPlanPhase(cwd, phase, raw) {
 
   const result = {
     // Models
-    researcher_model: resolveModelInternal(cwd, 'gsd-phase-researcher'),
-    planner_model: resolveModelInternal(cwd, 'gsd-planner'),
-    checker_model: resolveModelInternal(cwd, 'gsd-plan-checker'),
+    researcher_model: resolveModelInternal(cwd, 'gsa-phase-researcher'),
+    planner_model: resolveModelInternal(cwd, 'gsa-planner'),
+    checker_model: resolveModelInternal(cwd, 'gsa-plan-checker'),
 
     // Workflow flags
     research_enabled: config.research,
@@ -164,7 +164,7 @@ function cmdInitNewProject(cwd, raw) {
 
   // Detect Brave Search API key availability
   const homedir = require('os').homedir();
-  const braveKeyFile = path.join(homedir, '.gsd', 'brave_api_key');
+  const braveKeyFile = path.join(homedir, '.gsa', 'brave_api_key');
   const hasBraveSearch = !!(process.env.BRAVE_API_KEY || fs.existsSync(braveKeyFile));
 
   // Detect existing code
@@ -187,9 +187,9 @@ function cmdInitNewProject(cwd, raw) {
 
   const result = {
     // Models
-    researcher_model: resolveModelInternal(cwd, 'gsd-project-researcher'),
-    synthesizer_model: resolveModelInternal(cwd, 'gsd-research-synthesizer'),
-    roadmapper_model: resolveModelInternal(cwd, 'gsd-roadmapper'),
+    researcher_model: resolveModelInternal(cwd, 'gsa-project-researcher'),
+    synthesizer_model: resolveModelInternal(cwd, 'gsa-research-synthesizer'),
+    roadmapper_model: resolveModelInternal(cwd, 'gsa-roadmapper'),
 
     // Config
     commit_docs: config.commit_docs,
@@ -224,9 +224,9 @@ function cmdInitNewMilestone(cwd, raw) {
 
   const result = {
     // Models
-    researcher_model: resolveModelInternal(cwd, 'gsd-project-researcher'),
-    synthesizer_model: resolveModelInternal(cwd, 'gsd-research-synthesizer'),
-    roadmapper_model: resolveModelInternal(cwd, 'gsd-roadmapper'),
+    researcher_model: resolveModelInternal(cwd, 'gsa-project-researcher'),
+    synthesizer_model: resolveModelInternal(cwd, 'gsa-research-synthesizer'),
+    roadmapper_model: resolveModelInternal(cwd, 'gsa-roadmapper'),
 
     // Config
     commit_docs: config.commit_docs,
@@ -270,10 +270,10 @@ function cmdInitQuick(cwd, description, raw) {
 
   const result = {
     // Models
-    planner_model: resolveModelInternal(cwd, 'gsd-planner'),
-    executor_model: resolveModelInternal(cwd, 'gsd-executor'),
-    checker_model: resolveModelInternal(cwd, 'gsd-plan-checker'),
-    verifier_model: resolveModelInternal(cwd, 'gsd-verifier'),
+    planner_model: resolveModelInternal(cwd, 'gsa-planner'),
+    executor_model: resolveModelInternal(cwd, 'gsa-executor'),
+    checker_model: resolveModelInternal(cwd, 'gsa-plan-checker'),
+    verifier_model: resolveModelInternal(cwd, 'gsa-verifier'),
 
     // Config
     commit_docs: config.commit_docs,
@@ -342,8 +342,8 @@ function cmdInitVerifyWork(cwd, phase, raw) {
 
   const result = {
     // Models
-    planner_model: resolveModelInternal(cwd, 'gsd-planner'),
-    checker_model: resolveModelInternal(cwd, 'gsd-plan-checker'),
+    planner_model: resolveModelInternal(cwd, 'gsa-planner'),
+    checker_model: resolveModelInternal(cwd, 'gsa-plan-checker'),
 
     // Config
     commit_docs: config.commit_docs,
@@ -574,7 +574,7 @@ function cmdInitMapCodebase(cwd, raw) {
 
   const result = {
     // Models
-    mapper_model: resolveModelInternal(cwd, 'gsd-codebase-mapper'),
+    mapper_model: resolveModelInternal(cwd, 'gsa-codebase-mapper'),
 
     // Config
     commit_docs: config.commit_docs,
@@ -658,8 +658,8 @@ function cmdInitProgress(cwd, raw) {
 
   const result = {
     // Models
-    executor_model: resolveModelInternal(cwd, 'gsd-executor'),
-    planner_model: resolveModelInternal(cwd, 'gsd-planner'),
+    executor_model: resolveModelInternal(cwd, 'gsa-executor'),
+    planner_model: resolveModelInternal(cwd, 'gsa-planner'),
 
     // Config
     commit_docs: config.commit_docs,

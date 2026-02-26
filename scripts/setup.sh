@@ -3,7 +3,7 @@
 set -e
 echo "GSA Startup Kit Setup"
 
-# Verify Node (for GSD hooks)
+# Verify Node (for GSA hooks)
 if command -v node &>/dev/null; then
   echo "Node.js: $(node -v)"
 else

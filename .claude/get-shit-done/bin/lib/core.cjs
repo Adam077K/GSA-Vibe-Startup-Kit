@@ -9,17 +9,17 @@ const { execSync } = require('child_process');
 // ─── Model Profile Table ─────────────────────────────────────────────────────
 
 const MODEL_PROFILES = {
-  'gsd-planner':              { quality: 'opus', balanced: 'opus',   budget: 'sonnet' },
-  'gsd-roadmapper':           { quality: 'opus', balanced: 'sonnet', budget: 'sonnet' },
-  'gsd-executor':             { quality: 'opus', balanced: 'sonnet', budget: 'sonnet' },
-  'gsd-phase-researcher':     { quality: 'opus', balanced: 'sonnet', budget: 'haiku' },
-  'gsd-project-researcher':   { quality: 'opus', balanced: 'sonnet', budget: 'haiku' },
-  'gsd-research-synthesizer': { quality: 'sonnet', balanced: 'sonnet', budget: 'haiku' },
-  'gsd-debugger':             { quality: 'opus', balanced: 'sonnet', budget: 'sonnet' },
-  'gsd-codebase-mapper':      { quality: 'sonnet', balanced: 'haiku', budget: 'haiku' },
-  'gsd-verifier':             { quality: 'sonnet', balanced: 'sonnet', budget: 'haiku' },
-  'gsd-plan-checker':         { quality: 'sonnet', balanced: 'sonnet', budget: 'haiku' },
-  'gsd-integration-checker':  { quality: 'sonnet', balanced: 'sonnet', budget: 'haiku' },
+  'gsa-planner':              { quality: 'opus', balanced: 'opus',   budget: 'sonnet' },
+  'gsa-roadmapper':           { quality: 'opus', balanced: 'sonnet', budget: 'sonnet' },
+  'gsa-executor':             { quality: 'opus', balanced: 'sonnet', budget: 'sonnet' },
+  'gsa-phase-researcher':     { quality: 'opus', balanced: 'sonnet', budget: 'haiku' },
+  'gsa-project-researcher':   { quality: 'opus', balanced: 'sonnet', budget: 'haiku' },
+  'gsa-research-synthesizer': { quality: 'sonnet', balanced: 'sonnet', budget: 'haiku' },
+  'gsa-debugger':             { quality: 'opus', balanced: 'sonnet', budget: 'sonnet' },
+  'gsa-codebase-mapper':      { quality: 'sonnet', balanced: 'haiku', budget: 'haiku' },
+  'gsa-verifier':             { quality: 'sonnet', balanced: 'sonnet', budget: 'haiku' },
+  'gsa-plan-checker':         { quality: 'sonnet', balanced: 'sonnet', budget: 'haiku' },
+  'gsa-integration-checker':  { quality: 'sonnet', balanced: 'sonnet', budget: 'haiku' },
 };
 
 // ─── Output helpers ───────────────────────────────────────────────────────────
@@ -32,7 +32,7 @@ function output(result, raw, rawValue) {
     // Large payloads exceed Claude Code's Bash tool buffer (~50KB).
     // Write to tmpfile and output the path prefixed with @file: so callers can detect it.
     if (json.length > 50000) {
-      const tmpPath = path.join(require('os').tmpdir(), `gsd-${Date.now()}.json`);
+      const tmpPath = path.join(require('os').tmpdir(), `gsa-${Date.now()}.json`);
       fs.writeFileSync(tmpPath, json, 'utf-8');
       process.stdout.write('@file:' + tmpPath);
     } else {
@@ -64,8 +64,8 @@ function loadConfig(cwd) {
     commit_docs: true,
     search_gitignored: false,
     branching_strategy: 'none',
-    phase_branch_template: 'gsd/phase-{phase}-{slug}',
-    milestone_branch_template: 'gsd/{milestone}-{slug}',
+    phase_branch_template: 'gsa/phase-{phase}-{slug}',
+    milestone_branch_template: 'gsa/{milestone}-{slug}',
     research: true,
     plan_checker: true,
     verifier: true,
