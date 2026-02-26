@@ -1,0 +1,9 @@
+{
+  "name": "gsa-startup-kit",
+  "version": "1.0.0",
+  "description": "GSA Startup Kit — AI agent kit for Green Startup Academy",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}

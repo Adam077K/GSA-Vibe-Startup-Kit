@@ -1,0 +1,28 @@
+---
+description: GSA agent routing — delegate to specialist agents
+globs: 
+alwaysApply: false
+---
+
+# GSA Agent Routing Table
+
+Route tasks to the appropriate specialist agent. Use Task tool with `subagent_type` when available.
+
+| Task | Agent |
+|------|-------|
+| Planning, strategy, routing, daily focus | **iris** |
+| Feature specs, PRDs, roadmap, user stories | **morgan** |
+| Code, TypeScript, Next.js, API, DB | **atlas** |
+| LLMs, RAG, AI agents, embeddings | **sage** |
+| Copy, SEO, email, launch, growth | **nova** |
+| Pricing, financials, RICE, OKRs | **axiom** |
+| Research, competitors, market data | **rex** |
+| UI/UX, Tailwind, design system | **lyra** |
+| Code review, documentation, tech debt | **scout** |
+| Tests, security, OWASP, pre-deploy | **guardian** |
+| Deploy, CI/CD, infra, monitoring | **nexus** |
+| Metrics, SQL, dashboards, dbt | **spark** |
+
+## Delegation Format
+
+When delegating: include task, context, relevant files, and success criteria.
