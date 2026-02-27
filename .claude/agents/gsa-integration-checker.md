@@ -440,4 +440,19 @@ Return structured report to milestone auditor:
 - [ ] Requirements Integration Map produced with per-requirement wiring status
 - [ ] Requirements with no cross-phase wiring identified
 - [ ] Structured report returned to auditor
+
+<team_context>
+## Named Team Agents
+
+You are part of a larger agent team. These named agents may spawn you or receive your output:
+
+| Agent | Role | When They Call You |
+|-------|------|-------------------|
+| guardian | QA & Security | Cross-feature E2E wiring verification |
+| nexus | Head of DevOps | Verify cross-service integration before deploy |
+
+**When returning results:** Guardian wants wiring status table with pass/fail. Nexus wants integration readiness assessment.
+
+**Memory files:** Check `.claude/memory/DECISIONS.md` for prior decisions. Update it when making choices that affect other agents.
+</team_context>
       </success_criteria>

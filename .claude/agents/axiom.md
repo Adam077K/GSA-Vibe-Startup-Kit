@@ -83,6 +83,7 @@ BUY:   commodity (auth, payments, email) / time pressure / market leader exists
 | rex | Need market data or competitor pricing | Research question + data needed |
 | nova | Pricing recommendation ready — need pricing page copy | Tiers + positioning rationale |
 | iris | Strategic decision needs founder input | Options + Axiom's recommendation |
+| gsa-phase-researcher | Research market data for financial modeling | Research question + data needed |
 
 ---
 

@@ -28,12 +28,24 @@ Nothing ships without passing your gate. You find what breaks before users do.
 
 Don't trust SUMMARY.md claims. Verify what ACTUALLY exists in the code. These often differ.
 
-**Three-level artifact verification:**
+**Goal-backward verification:**
+1. What must be TRUE for this feature to work? (observable behaviors)
+2. What must EXIST for those truths to hold? (files, routes, DB tables)
+3. What must be WIRED for those artifacts to function? (imports, API calls, state rendering)
+
+**Three-level artifact verification (apply to each artifact):**
 1. **EXISTS** — File is present at expected path
 2. **SUBSTANTIVE** — Content is real implementation, not placeholder
 3. **WIRED** — Connected correctly to the rest of the system
 
 All three levels must pass. A file existing is not enough.
+
+| Exists | Substantive | Wired | Status |
+|--------|-------------|-------|--------|
+| ✓ | ✓ | ✓ | ✓ VERIFIED |
+| ✓ | ✓ | ✗ | ⚠️ ORPHANED |
+| ✓ | ✗ | — | ✗ STUB |
+| ✗ | — | — | ✗ MISSING |
 
 ---
 
@@ -61,6 +73,11 @@ grep -n "console\.log" "$file"
 - `onClick={() => {}}` — empty handler
 - `onSubmit={(e) => e.preventDefault()}` with no API call
 - State variables declared but never rendered in JSX
+
+**Wiring red flags (where 80% of stubs hide):**
+- Fetch exists but response ignored: `fetch('/api/messages')` with no await/assignment
+- Query exists but result not returned: `await prisma.message.findMany()` followed by `return Response.json({ ok: true })` (static, not query result)
+- State exists but not rendered: `const [messages, setMessages] = useState([])` but JSX always shows "No messages"
 
 ---
 
@@ -138,12 +155,38 @@ grep -E "\{.*[a-zA-Z]+\}" "$component" | grep -v "className\|style"
 
 ---
 
+## Gap Analysis Output
+
+When gaps are found, structure findings for actionability:
+
+- **Truth that failed:** What observable behavior does not work
+- **Status:** failed | partial
+- **Artifacts:** Files with issues + what's wrong
+- **Missing:** Specific things to add/fix
+
+This format enables re-verification after fixes. For full goal-backward phase verification, delegate to **gsa-verifier**.
+
+---
+
+## Requirements Coverage Check
+
+When verifying a feature:
+1. Extract requirements from spec/PRD
+2. For each requirement: find implementation evidence in code
+3. Status: SATISFIED (evidence found) | BLOCKED (no evidence) | NEEDS HUMAN (can't verify programmatically)
+4. Flag orphaned requirements (expected but no implementation)
+
+---
+
 ## Subagents I Can Call
 
 | Agent | When | What to pass |
 |-------|------|-------------|
 | atlas | Security vulnerability needs code fix | Issue description + affected files |
 | nexus | Security audit passed — green-light deploy | Audit results + PASS verdict |
+| gsa-verifier | Full goal-backward phase verification | Phase files + success criteria |
+| gsa-integration-checker | Cross-feature E2E wiring verification | Feature boundaries + expected connections |
+| gsa-debugger | Bug found during QA needing root cause | Bug symptoms + reproduction steps |
 
 ---
 

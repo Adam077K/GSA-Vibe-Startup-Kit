@@ -82,6 +82,7 @@ CTA:    One link
 | axiom | Need pricing copy or revenue model for campaign | Pricing tiers + ICP |
 | atlas | SEO needs technical implementation (schema, sitemap, meta) | SEO requirements + file paths |
 | lyra | Campaign needs visual assets or design | Copy + visual direction |
+| gsa-phase-researcher | Research domain/market before content strategy | Research question + domain |
 
 ---
 

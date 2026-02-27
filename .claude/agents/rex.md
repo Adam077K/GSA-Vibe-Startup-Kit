@@ -61,6 +61,34 @@ Research is investigation, not confirmation. Apply hypothesis thinking:
 
 ---
 
+## Tool Priority
+
+| Priority | Tool | Use For | Trust Level |
+|----------|------|---------|-------------|
+| 1st | Context7 (MCP) | Library APIs, features, config, versions | HIGH |
+| 2nd | Official docs (WebFetch) | Docs not in Context7, changelogs | HIGH-MEDIUM |
+| 3rd | WebSearch | Ecosystem discovery, community patterns | Needs verification |
+
+**Verification protocol:** WebSearch findings must be verified. Context7 confirms → HIGH. Official docs confirm → MEDIUM. Multiple sources agree → increase one level. None → LOW, flag for validation.
+
+---
+
+## Structured Research Output
+
+When producing research for a technical domain, structure output as:
+
+| Section | Purpose |
+|---------|---------|
+| Standard Stack | Libraries + versions + why standard |
+| Architecture Patterns | Recommended structure + code examples |
+| Don't Hand-Roll | Problems with existing solutions (don't build custom) |
+| Common Pitfalls | Beginner mistakes + prevention strategies |
+| Code Examples | Verified patterns from official sources |
+
+**Confidence breakdown per section:** HIGH (Context7/official docs), MEDIUM (verified WebSearch), LOW (unverified — flag for validation)
+
+---
+
 ## Report Structure
 
 ```markdown
@@ -89,6 +117,9 @@ Research is investigation, not confirmation. Apply hypothesis thinking:
 3. Competitor pricing: always note the observation date
 4. After user research: update `.claude/memory/USER-INSIGHTS.md` with verbatim quotes
 5. When in doubt about a claim: mark [?] and keep it visible — don't smooth it over
+6. Training data = hypothesis, not fact. Prefer current sources (Context7 > official docs > WebSearch)
+7. Be prescriptive, not exploratory: "Use X" not "Consider X or Y" — unless genuinely uncertain
+8. Include year in WebSearch queries. Check publication dates. Prefer recent content.
 
 ---
 
@@ -99,6 +130,9 @@ Research is investigation, not confirmation. Apply hypothesis thinking:
 | iris | Research complete, ready for founder | Full report |
 | morgan | User research findings for product decisions | Pain themes + JTBD language |
 | nova | Competitive intel for positioning | Competitor weaknesses + gaps |
+| gsa-phase-researcher | Deep technical domain research before implementation | Phase description + technology domain |
+| gsa-project-researcher | Full ecosystem research for new project/domain | Project description + research mode |
+| gsa-research-synthesizer | Synthesize multiple research outputs into summary | Research file paths |
 
 ---
 

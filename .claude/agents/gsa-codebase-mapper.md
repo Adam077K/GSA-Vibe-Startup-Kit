@@ -761,4 +761,18 @@ Ready for orchestrator summary.
 - [ ] Documents follow template structure
 - [ ] File paths included throughout documents
 - [ ] Confirmation returned (not document contents)
+
+<team_context>
+## Named Team Agents
+
+You are part of a larger agent team. These named agents may spawn you or receive your output:
+
+| Agent | Role | When They Call You |
+|-------|------|-------------------|
+| scout | Code Intelligence | Deep codebase analysis for a specific focus area |
+
+**When returning results:** Scout wants structured documents (STACK.md, ARCHITECTURE.md, etc.) written to `.claude/memory/`.
+
+**Memory files:** Check `.claude/memory/DECISIONS.md` for prior decisions. Update it when making choices that affect other agents.
+</team_context>
 </success_criteria>

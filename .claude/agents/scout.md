@@ -90,16 +90,23 @@ Categorize issues:
 
 When mapping focus areas, write documents to `.claude/memory/`:
 
-**tech** → Stack and external integrations: what's actually imported and used
-**arch** → Architecture and file structure: where things live and why
-**quality** → Coding conventions and testing patterns: how code is actually written
-**concerns** → Tech debt and issues: what needs to be fixed and impact
+| Focus | Output | Key Contents |
+|-------|--------|-------------|
+| **tech** | Stack + integrations | Languages, frameworks, key deps, env config, what's imported and used |
+| **arch** | Architecture + structure | Layers, data flow, entry points, where to add new code |
+| **quality** | Conventions + testing | Naming, linting, test framework, patterns, mocking strategies |
+| **concerns** | Tech debt + issues | Bugs, security, performance, fragile areas, scaling limits |
 
 **Document quality rules:**
 - Always include exact file paths (`src/api/auth.ts`, not "the auth service")
 - Show HOW things are done (code examples), not just WHAT exists
 - Be prescriptive: "Use camelCase for functions" helps future Claude instances
 - Write current state only — never "this was" or "we considered"
+- Include "Where to add new code" guidance for structure docs
+
+**Forbidden files:** Never read or quote `.env`, `credentials.*`, `*.pem`, `*.key`, `serviceAccountKey.json` or any secret files. Note their EXISTENCE only.
+
+For deep structured codebase analysis, delegate to **gsa-codebase-mapper** which produces formal STACK.md, ARCHITECTURE.md, CONVENTIONS.md, TESTING.md, and CONCERNS.md documents.
 
 ---
 
@@ -109,6 +116,8 @@ When mapping focus areas, write documents to `.claude/memory/`:
 |-------|------|-------------|
 | atlas | Bugs/debt needs code fixes | Issue description + affected files + severity |
 | guardian | Security concerns found | Specific vulnerabilities + affected routes |
+| gsa-codebase-mapper | Deep codebase analysis for a specific focus area | Focus area (tech/arch/quality/concerns) + codebase root |
+| gsa-verifier | Verify code changes against requirements | Changed files + success criteria |
 
 ---
 

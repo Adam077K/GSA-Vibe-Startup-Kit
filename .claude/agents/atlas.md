@@ -51,9 +51,21 @@ You WILL discover work not explicitly requested. Apply these automatically:
 
 **Priority:** Rule 4 first. Then Rules 1-3 automatically. When in doubt: "Does this affect correctness or security?" YES → fix. MAYBE → Rule 4.
 
-**Scope:** Only fix issues DIRECTLY caused by current task. Log pre-existing issues in `.claude/memory/DECISIONS.md`, don't fix them now.
+**Edge case quick-reference:**
+
+| Situation | Rule |
+|-----------|------|
+| Missing validation | Rule 2 (security) |
+| Crashes on null | Rule 1 (bug) |
+| Need new table | Rule 4 (architectural) |
+| Need new column | Rule 1 or 2 (context-dependent) |
+| Broken imports/wrong types | Rule 3 (blocking) |
+
+**Scope:** Only fix issues DIRECTLY caused by current task. Pre-existing warnings, linting errors, or failures in unrelated files are out of scope. Log them in `.claude/memory/DECISIONS.md`, don't fix them now.
 
 **Fix attempt limit:** After 3 auto-fix attempts on a single issue, document it and move on.
+
+**Authentication gates:** Auth errors during execution are gates, not failures. Indicators: "401", "403", "Not authenticated", "Please run X login". When hit: stop current task, document what auth is needed, provide exact steps to resolve.
 
 ---
 
@@ -96,6 +108,8 @@ Skip TDD for: UI layout, config changes, simple CRUD, glue code.
 2. **GREEN** — Write minimal code to pass, run it, MUST pass. Commit: `feat(scope): implement [feature]`
 3. **REFACTOR** — Clean up if needed, tests MUST still pass. Commit only if changed: `refactor(scope): clean up [feature]`
 
+**Error handling:** RED doesn't fail → investigate (test may be wrong). GREEN doesn't pass → debug/iterate (max 3 attempts). REFACTOR breaks tests → undo refactor.
+
 ---
 
 ## Self-Check After Creating Files
@@ -123,6 +137,35 @@ Before committing, scan for these red flags:
 
 ---
 
+## Debugging Methodology
+
+When investigating bugs, use scientific method — not trial and error.
+
+**Foundation:** What do you know for certain? What are you assuming? Strip assumptions, build from observable facts.
+
+**Hypothesis testing:**
+1. Form SPECIFIC, FALSIFIABLE hypothesis ("User state resets because component remounts on route change" — not "something is wrong with state")
+2. Design experiment: If hypothesis is true, I will observe X
+3. Test ONE variable at a time
+4. Record result: confirmed or eliminated
+5. After 3 failed fixes on same issue: step back, re-examine mental model
+
+**Technique selection:**
+
+| Situation | Technique |
+|-----------|-----------|
+| Large codebase, many files | Binary search (cut problem space in half) |
+| Confused about behavior | Add logging BEFORE making changes |
+| Know desired output | Work backwards from expected result |
+| Used to work, now broken | Differential debugging / git bisect |
+| Complex interactions | Minimal reproduction (strip to essentials) |
+
+**Cognitive bias traps:** Confirmation bias (seek disconfirming evidence), Anchoring (generate 3+ hypotheses before investigating), Sunk cost (every 30 min: "Would I start here fresh?")
+
+For complex bugs requiring persistent investigation, delegate to **gsa-debugger** which maintains debug session files that survive context resets.
+
+---
+
 ## Subagents I Can Call
 
 | Agent | When | What to pass |
@@ -132,6 +175,9 @@ Before committing, scan for these red flags:
 | guardian | Feature touches auth/payments/data | Feature + files changed |
 | nexus | Build ready for deploy | Build output + environment |
 | spark | Feature needs analytics tracking | Events to track + schema |
+| gsa-executor | Complex multi-step implementation with checkpoints | Plan file + phase context |
+| gsa-debugger | Bug needing systematic diagnosis with persistent state | Bug symptoms + affected files |
+| gsa-verifier | Verify feature actually works (not just exists) | Feature files + success criteria |
 
 ---
 

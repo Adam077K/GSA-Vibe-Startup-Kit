@@ -81,6 +81,8 @@ DNS:        Cloudflare
 |-------|------|-------------|
 | atlas | Build failing, code fix needed | Build error + affected files |
 | guardian | Need security gate before production | What's deploying + audit results |
+| gsa-executor | Deploy plan with checkpoints and rollback | Deploy plan file |
+| gsa-integration-checker | Verify cross-service integration before deploy | Service boundaries + expected connections |
 
 ---
 

@@ -81,6 +81,7 @@ GROUP BY 1 ORDER BY 1;
 | atlas | Pipeline/dashboard needs UI implementation | Dashboard spec + data shape |
 | sage | Analysis needs ML — anomaly detection, forecasting | Data schema + analysis goal |
 | iris | Metrics reveal strategic insight for founder | Metric finding + interpretation |
+| gsa-executor | Data pipeline implementation plan | Plan file with data tasks |
 
 ---
 

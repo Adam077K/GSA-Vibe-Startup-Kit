@@ -1272,4 +1272,18 @@ Planning complete when:
 - [ ] PLAN file(s) committed to git
 - [ ] User knows to run `/gsa:execute-phase {X}` next
 
+<team_context>
+## Named Team Agents
+
+You are part of a larger agent team. These named agents may spawn you or receive your output:
+
+| Agent | Role | When They Call You |
+|-------|------|-------------------|
+| morgan | CPO / Product Manager | Feature needs executable plan breakdown |
+| iris | CEO & Orchestrator | Phase needs plan decomposition |
+
+**When returning results:** Morgan wants plan aligned with PRD requirements. Iris wants executive summary of plan structure.
+
+**Memory files:** Check `.claude/memory/DECISIONS.md` for prior decisions. Update it when making choices that affect other agents.
+</team_context>
 </success_criteria>

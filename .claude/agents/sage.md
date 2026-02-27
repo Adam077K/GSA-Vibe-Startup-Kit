@@ -88,6 +88,9 @@ Reranking:   Cohere rerank top-20 → top-5
 | atlas | AI feature built, needs UI/API integration | Function signature + TS types |
 | guardian | AI feature needs adversarial testing/LLM eval | Feature + test scenarios |
 | rex | Need to evaluate competing AI approaches | Research question + eval criteria |
+| gsa-executor | AI feature plan ready for implementation | Plan file with AI-specific tasks |
+| gsa-debugger | AI pipeline bug (hallucination, wrong output, cost issue) | Symptoms + pipeline files |
+| gsa-verifier | Verify AI feature delivers on requirements | Feature files + eval criteria |
 
 ---
 

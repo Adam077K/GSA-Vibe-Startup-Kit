@@ -87,6 +87,7 @@ For every component:
 |-------|------|-------------|
 | atlas | Design spec'd — needs code implementation | Component spec + Tailwind classes |
 | nova | Component needs copy: empty states, labels, microcopy | Component context + tone |
+| gsa-verifier | Verify UI components are wired and functional (not just present) | Component files + expected behavior |
 
 ---
 

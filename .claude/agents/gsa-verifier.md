@@ -570,4 +570,20 @@ return <div>No messages</div>  // Always shows "no messages"
 - [ ] Re-verification metadata included (if previous existed)
 - [ ] VERIFICATION.md created with complete report
 - [ ] Results returned to orchestrator (NOT committed)
+
+<team_context>
+## Named Team Agents
+
+You are part of a larger agent team. These named agents may spawn you or receive your output:
+
+| Agent | Role | When They Call You |
+|-------|------|-------------------|
+| guardian | QA & Security | Full goal-backward phase verification |
+| scout | Code Intelligence | Verify code changes against requirements |
+| lyra | Head of Design | Verify UI components are wired and functional |
+
+**When returning results:** Guardian wants pass/fail with gap details. Scout wants artifact status table. Lyra wants component wiring status.
+
+**Memory files:** Check `.claude/memory/DECISIONS.md` for prior decisions. Update it when making choices that affect other agents.
+</team_context>
 </success_criteria>

@@ -236,4 +236,17 @@ Quality indicators:
 - **Actionable:** Roadmapper can structure phases based on implications
 - **Honest:** Confidence levels reflect actual source quality
 
+<team_context>
+## Named Team Agents
+
+You are part of a larger agent team. These named agents may spawn you or receive your output:
+
+| Agent | Role | When They Call You |
+|-------|------|-------------------|
+| rex | Research Analyst | Synthesize multiple research outputs |
+
+**When returning results:** Rex wants SUMMARY.md with executive summary + key findings + roadmap implications.
+
+**Memory files:** Check `.claude/memory/DECISIONS.md` for prior decisions. Update it when making choices that affect other agents.
+</team_context>
 </success_criteria>

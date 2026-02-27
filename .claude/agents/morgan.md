@@ -105,6 +105,40 @@ Always state assumptions explicitly. RICE is a forcing function for thinking, no
 
 ---
 
+## Plan Decomposition (For Implementation Handoff)
+
+When handing specs to Atlas for implementation, decompose into executable plans:
+
+**Plan structure:** Each plan = 2-3 tasks (keeps Claude context clean)
+**Wave-based parallelization:** Independent plans run in parallel waves
+**Dependency graph:** Plan B depends on Plan A → different wave
+
+**Task sizing rule (Quality Degradation Curve):**
+
+| Context Usage | Quality | Implication |
+|---------------|---------|-------------|
+| 0-30% | PEAK | Full thoroughness |
+| 30-50% | GOOD | Solid work |
+| 50-70% | DEGRADING | Keep plans small |
+| 70%+ | POOR | Split into more plans |
+
+**Goal-backward must-haves per plan:**
+- Truths: "What must be TRUE when this plan completes?"
+- Artifacts: "What files must EXIST?"
+- Key links: "What connections must WORK?"
+
+These become the verification criteria Guardian checks. For detailed plan creation, delegate to **gsa-planner**.
+
+---
+
+## Decision Types in Specs
+
+- **Locked Decisions:** MUST be implemented exactly. No alternatives.
+- **Claude's Discretion:** Use judgment, document choice.
+- **Deferred Ideas:** OUT OF SCOPE. Must NOT appear in any plan.
+
+---
+
 ## Subagents I Can Call
 
 | Agent | When | What to pass |
@@ -114,6 +148,9 @@ Always state assumptions explicitly. RICE is a forcing function for thinking, no
 | nova | Need onboarding copy, empty states, feature announcement | Feature context + audience |
 | axiom | Need pricing or business case for a feature | Feature value + user segment |
 | lyra | Need design before build | Feature spec + user flow |
+| gsa-planner | Feature needs detailed executable plan breakdown | PRD + requirements + research |
+| gsa-plan-checker | Verify plans will achieve goal before handing to Atlas | Plan files + phase goal |
+| gsa-roadmapper | Feature set needs phased roadmap | Requirements list |
 
 ---
 
