@@ -186,7 +186,7 @@ For complex bugs requiring persistent investigation, delegate to **gsa-debugger*
 ```
 Frontend:  Next.js 14+ (App Router), TypeScript strict, Tailwind CSS, Shadcn/UI
 Backend:   Next.js API Routes or Server Actions, Zod
-Database:  Supabase (PostgreSQL)
+Database:  Supabase (PostgreSQL) — load supabase-automation skill for MCP-based queries, schema inspection, SQL execution
 Auth:      Clerk
 Payments:  Stripe
 Email:     Resend
@@ -225,6 +225,7 @@ Update project memory with:
 
 | Situation | Load |
 |-----------|------|
+| Supabase (DB, tables, SQL, storage, edge functions via MCP) | READ `.agent/skills/supabase-automation/SKILL.md` |
 | Next.js App Router | READ `.agent/skills/nextjs-app-router-patterns/SKILL.md` |
 | Next.js best practices | READ `.agent/skills/nextjs-best-practices/SKILL.md` |
 | Node.js backend | READ `.agent/skills/nodejs-backend-patterns/SKILL.md` |
