@@ -108,21 +108,21 @@ Update project memory with:
 
 | Situation | Load |
 |-----------|------|
-| AI engineering | READ `.agent/skills/ai-engineer/SKILL.md` |
-| AI agents architecture | READ `.agent/skills/ai-agents-architect/SKILL.md` |
-| Agent development | READ `.agent/skills/ai-agent-development/SKILL.md` |
-| RAG system design | READ `.agent/skills/rag-engineer/SKILL.md` |
-| RAG implementation | READ `.agent/skills/rag-implementation/SKILL.md` |
-| Vector database | READ `.agent/skills/vector-database-engineer/SKILL.md` |
-| Vector index tuning | READ `.agent/skills/vector-index-tuning/SKILL.md` |
-| Embedding strategy | READ `.agent/skills/embedding-strategies/SKILL.md` |
-| Hybrid search | READ `.agent/skills/hybrid-search-implementation/SKILL.md` |
-| Prompt engineering | READ `.agent/skills/prompt-engineering/SKILL.md` |
-| Prompt patterns | READ `.agent/skills/prompt-engineering-patterns/SKILL.md` |
-| Prompt caching | READ `.agent/skills/prompt-caching/SKILL.md` |
-| LangGraph | READ `.agent/skills/langgraph/SKILL.md` |
-| Conversation memory | READ `.agent/skills/conversation-memory/SKILL.md` |
-| Voice agents | READ `.agent/skills/voice-agents/SKILL.md` |
-| Inngest background jobs | READ `.agent/skills/inngest/SKILL.md` |
-| Multi-agent patterns | READ `.agent/skills/multi-agent-patterns/SKILL.md` |
-| LLM evaluation | READ `.agent/skills/llm-evaluation/SKILL.md` |
+| AI engineering | READ `.claude/skills/ai-engineer/SKILL.md` |
+| AI agents architecture | READ `.claude/skills/ai-agents-architect/SKILL.md` |
+| Agent development | READ `.claude/skills/ai-agent-development/SKILL.md` |
+| RAG system design | READ `.claude/skills/rag-engineer/SKILL.md` |
+| RAG implementation | READ `.claude/skills/rag-implementation/SKILL.md` |
+| Vector database | READ `.claude/skills/vector-database-engineer/SKILL.md` |
+| Vector index tuning | READ `.claude/skills/vector-index-tuning/SKILL.md` |
+| Embedding strategy | READ `.claude/skills/embedding-strategies/SKILL.md` |
+| Hybrid search | READ `.claude/skills/hybrid-search-implementation/SKILL.md` |
+| Prompt engineering | READ `.claude/skills/prompt-engineering/SKILL.md` |
+| Prompt patterns | READ `.claude/skills/prompt-engineering-patterns/SKILL.md` |
+| Prompt caching | READ `.claude/skills/prompt-caching/SKILL.md` |
+| LangGraph | READ `.claude/skills/langgraph/SKILL.md` |
+| Conversation memory | READ `.claude/skills/conversation-memory/SKILL.md` |
+| Voice agents | READ `.claude/skills/voice-agents/SKILL.md` |
+| Inngest background jobs | READ `.claude/skills/inngest/SKILL.md` |
+| Multi-agent patterns | READ `.claude/skills/multi-agent-patterns/SKILL.md` |
+| LLM evaluation | READ `.claude/skills/llm-evaluation/SKILL.md` |

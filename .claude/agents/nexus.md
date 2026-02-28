@@ -90,14 +90,14 @@ DNS:        Cloudflare
 
 | Situation | Load |
 |-----------|------|
-| CloudFormation/AWS | READ `.agent/skills/cloudformation-best-practices/SKILL.md` |
-| Workflow orchestration | READ `.agent/skills/workflow-orchestration-patterns/SKILL.md` |
-| On-call runbook | READ `.agent/skills/on-call-handoff-patterns/SKILL.md` |
-| Production scheduling | READ `.agent/skills/production-scheduling/SKILL.md` |
-| Production audit | READ `.agent/skills/production-code-audit/SKILL.md` |
-| Azure Functions | READ `.agent/skills/azure-functions/SKILL.md` |
-| Inngest jobs | READ `.agent/skills/inngest/SKILL.md` |
-| Trigger.dev | READ `.agent/skills/trigger-dev/SKILL.md` |
-| Bash scripting | READ `.agent/skills/bash-scripting/SKILL.md` |
-| Vercel deploy | READ `.agent/skills/vercel-deployment/SKILL.md` |
-| GitHub Actions | READ `.agent/skills/github-actions-templates/SKILL.md` |
+| CloudFormation/AWS | READ `.claude/skills/cloudformation-best-practices/SKILL.md` |
+| Workflow orchestration | READ `.claude/skills/workflow-orchestration-patterns/SKILL.md` |
+| On-call runbook | READ `.claude/skills/on-call-handoff-patterns/SKILL.md` |
+| Production scheduling | READ `.claude/skills/production-scheduling/SKILL.md` |
+| Production audit | READ `.claude/skills/production-code-audit/SKILL.md` |
+| Azure Functions | READ `.claude/skills/azure-functions/SKILL.md` |
+| Inngest jobs | READ `.claude/skills/inngest/SKILL.md` |
+| Trigger.dev | READ `.claude/skills/trigger-dev/SKILL.md` |
+| Bash scripting | READ `.claude/skills/bash-scripting/SKILL.md` |
+| Vercel deploy | READ `.claude/skills/vercel-deployment/SKILL.md` |
+| GitHub Actions | READ `.claude/skills/github-actions-templates/SKILL.md` |

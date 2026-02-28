@@ -95,12 +95,12 @@ For every component:
 
 | Situation | Load |
 |-----------|------|
-| Radix UI components | READ `.agent/skills/radix-ui-design-system/SKILL.md` |
-| Tailwind design system | READ `.agent/skills/tailwind-design-system/SKILL.md` |
-| Tailwind patterns | READ `.agent/skills/tailwind-patterns/SKILL.md` |
-| React UI patterns | READ `.agent/skills/react-ui-patterns/SKILL.md` |
-| i18n / localization | READ `.agent/skills/i18n-localization/SKILL.md` |
-| WCAG accessibility | READ `.agent/skills/wcag-audit-patterns/SKILL.md` |
-| 3D web experience | READ `.agent/skills/3d-web-experience/SKILL.md` |
-| App store screenshots | READ `.agent/skills/app-store-optimization/SKILL.md` |
-| CRO / conversion design | READ `.agent/skills/page-cro/SKILL.md` |
+| Radix UI components | READ `.claude/skills/radix-ui-design-system/SKILL.md` |
+| Tailwind design system | READ `.claude/skills/tailwind-design-system/SKILL.md` |
+| Tailwind patterns | READ `.claude/skills/tailwind-patterns/SKILL.md` |
+| React UI patterns | READ `.claude/skills/react-ui-patterns/SKILL.md` |
+| i18n / localization | READ `.claude/skills/i18n-localization/SKILL.md` |
+| WCAG accessibility | READ `.claude/skills/wcag-audit-patterns/SKILL.md` |
+| 3D web experience | READ `.claude/skills/3d-web-experience/SKILL.md` |
+| App store screenshots | READ `.claude/skills/app-store-optimization/SKILL.md` |
+| CRO / conversion design | READ `.claude/skills/page-cro/SKILL.md` |

@@ -225,19 +225,19 @@ Update project memory with:
 
 | Situation | Load |
 |-----------|------|
-| Supabase (DB, tables, SQL, storage, edge functions via MCP) | READ `.agent/skills/supabase-automation/SKILL.md` |
-| Next.js App Router | READ `.agent/skills/nextjs-app-router-patterns/SKILL.md` |
-| Next.js best practices | READ `.agent/skills/nextjs-best-practices/SKILL.md` |
-| Node.js backend | READ `.agent/skills/nodejs-backend-patterns/SKILL.md` |
-| PostgreSQL | READ `.agent/skills/postgresql/SKILL.md` |
-| Query optimization | READ `.agent/skills/postgresql-optimization/SKILL.md` |
-| API design | READ `.agent/skills/api-design-principles/SKILL.md` |
-| API patterns | READ `.agent/skills/api-patterns/SKILL.md` |
-| Code refactoring | READ `.agent/skills/code-refactoring-refactor-clean/SKILL.md` |
-| Error handling | READ `.agent/skills/error-handling-patterns/SKILL.md` |
-| Software architecture | READ `.agent/skills/software-architecture/SKILL.md` |
-| ADR | READ `.agent/skills/architecture-decision-records/SKILL.md` |
-| Monorepo | READ `.agent/skills/monorepo-architect/SKILL.md` |
-| TypeScript advanced | READ `.agent/skills/typescript-pro/SKILL.md` |
-| React patterns | READ `.agent/skills/react-patterns/SKILL.md` |
-| React best practices | READ `.agent/skills/react-best-practices/SKILL.md` |
+| Supabase (DB, tables, SQL, storage, edge functions via MCP) | READ `.claude/skills/supabase-automation/SKILL.md` |
+| Next.js App Router | READ `.claude/skills/nextjs-app-router-patterns/SKILL.md` |
+| Next.js best practices | READ `.claude/skills/nextjs-best-practices/SKILL.md` |
+| Node.js backend | READ `.claude/skills/nodejs-backend-patterns/SKILL.md` |
+| PostgreSQL | READ `.claude/skills/postgresql/SKILL.md` |
+| Query optimization | READ `.claude/skills/postgresql-optimization/SKILL.md` |
+| API design | READ `.claude/skills/api-design-principles/SKILL.md` |
+| API patterns | READ `.claude/skills/api-patterns/SKILL.md` |
+| Code refactoring | READ `.claude/skills/code-refactoring-refactor-clean/SKILL.md` |
+| Error handling | READ `.claude/skills/error-handling-patterns/SKILL.md` |
+| Software architecture | READ `.claude/skills/software-architecture/SKILL.md` |
+| ADR | READ `.claude/skills/architecture-decision-records/SKILL.md` |
+| Monorepo | READ `.claude/skills/monorepo-architect/SKILL.md` |
+| TypeScript advanced | READ `.claude/skills/typescript-pro/SKILL.md` |
+| React patterns | READ `.claude/skills/react-patterns/SKILL.md` |
+| React best practices | READ `.claude/skills/react-best-practices/SKILL.md` |

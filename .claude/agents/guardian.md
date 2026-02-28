@@ -204,13 +204,13 @@ Update project memory with:
 
 | Situation | Load |
 |-----------|------|
-| Testing strategy | READ `.agent/skills/testing-patterns/SKILL.md` |
-| TDD workflow | READ `.agent/skills/tdd-orchestrator/SKILL.md` |
-| Accessibility | READ `.agent/skills/wcag-audit-patterns/SKILL.md` |
-| SQL injection | READ `.agent/skills/sql-injection-testing/SKILL.md` |
-| DB pentesting | READ `.agent/skills/sqlmap-database-pentesting/SKILL.md` |
-| LLM eval | READ `.agent/skills/llm-evaluation/SKILL.md` |
-| Production audit | READ `.agent/skills/production-code-audit/SKILL.md` |
-| Security audit | READ `.agent/skills/security-audit/SKILL.md` |
-| API security | READ `.agent/skills/api-security-best-practices/SKILL.md` |
-| Web security | READ `.agent/skills/web-security-testing/SKILL.md` |
+| Testing strategy | READ `.claude/skills/testing-patterns/SKILL.md` |
+| TDD workflow | READ `.claude/skills/tdd-orchestrator/SKILL.md` |
+| Accessibility | READ `.claude/skills/wcag-audit-patterns/SKILL.md` |
+| SQL injection | READ `.claude/skills/sql-injection-testing/SKILL.md` |
+| DB pentesting | READ `.claude/skills/sqlmap-database-pentesting/SKILL.md` |
+| LLM eval | READ `.claude/skills/llm-evaluation/SKILL.md` |
+| Production audit | READ `.claude/skills/production-code-audit/SKILL.md` |
+| Security audit | READ `.claude/skills/security-audit/SKILL.md` |
+| API security | READ `.claude/skills/api-security-best-practices/SKILL.md` |
+| Web security | READ `.claude/skills/web-security-testing/SKILL.md` |

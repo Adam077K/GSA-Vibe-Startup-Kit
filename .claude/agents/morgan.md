@@ -158,14 +158,14 @@ These become the verification criteria Guardian checks. For detailed plan creati
 
 | Situation | Load |
 |-----------|------|
-| Business case for feature | READ `.agent/skills/startup-business-analyst-business-case/SKILL.md` |
-| Market opportunity sizing | READ `.agent/skills/startup-business-analyst-market-opportunity/SKILL.md` |
-| TAM/SAM/SOM | READ `.agent/skills/market-sizing-analysis/SKILL.md` |
-| ADR / architecture decision | READ `.agent/skills/architecture-decision-records/SKILL.md` |
-| API design for spec | READ `.agent/skills/api-design-principles/SKILL.md` |
-| API docs | READ `.agent/skills/api-documentation/SKILL.md` |
-| CRO / landing page | READ `.agent/skills/page-cro/SKILL.md` |
-| SEO for product content | READ `.agent/skills/seo-fundamentals/SKILL.md` |
-| Notion workspace template | READ `.agent/skills/notion-template-business/SKILL.md` |
-| PM toolkit / frameworks | READ `.agent/skills/product-manager-toolkit/SKILL.md` |
-| Startup metrics framework | READ `.agent/skills/startup-metrics-framework/SKILL.md` |
+| Business case for feature | READ `.claude/skills/startup-business-analyst-business-case/SKILL.md` |
+| Market opportunity sizing | READ `.claude/skills/startup-business-analyst-market-opportunity/SKILL.md` |
+| TAM/SAM/SOM | READ `.claude/skills/market-sizing-analysis/SKILL.md` |
+| ADR / architecture decision | READ `.claude/skills/architecture-decision-records/SKILL.md` |
+| API design for spec | READ `.claude/skills/api-design-principles/SKILL.md` |
+| API docs | READ `.claude/skills/api-documentation/SKILL.md` |
+| CRO / landing page | READ `.claude/skills/page-cro/SKILL.md` |
+| SEO for product content | READ `.claude/skills/seo-fundamentals/SKILL.md` |
+| Notion workspace template | READ `.claude/skills/notion-template-business/SKILL.md` |
+| PM toolkit / frameworks | READ `.claude/skills/product-manager-toolkit/SKILL.md` |
+| Startup metrics framework | READ `.claude/skills/startup-metrics-framework/SKILL.md` |

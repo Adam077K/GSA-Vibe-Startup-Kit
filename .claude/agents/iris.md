@@ -144,14 +144,14 @@ Questions that unlock thinking:
 
 | Situation | Load |
 |-----------|------|
-| Multi-agent coordination | READ `.agent/skills/multi-agent-patterns/SKILL.md` |
-| Workflow design | READ `.agent/skills/workflow-patterns/SKILL.md` |
-| Deep research needed | READ `.agent/skills/deep-research/SKILL.md` |
-| Financial model/projections | READ `.agent/skills/startup-financial-modeling/SKILL.md` |
-| Pricing decision | READ `.agent/skills/pricing-strategy/SKILL.md` |
-| Market sizing | READ `.agent/skills/market-sizing-analysis/SKILL.md` |
-| Competitive overview | READ `.agent/skills/competitive-landscape/SKILL.md` |
-| Business case | READ `.agent/skills/startup-business-analyst-business-case/SKILL.md` |
-| Team/hiring | READ `.agent/skills/team-composition-analysis/SKILL.md` |
-| Architecture overview | READ `.agent/skills/software-architecture/SKILL.md` |
-| Parallel agents | READ `.agent/skills/parallel-agents/SKILL.md` |
+| Multi-agent coordination | READ `.claude/skills/multi-agent-patterns/SKILL.md` |
+| Workflow design | READ `.claude/skills/workflow-patterns/SKILL.md` |
+| Deep research needed | READ `.claude/skills/deep-research/SKILL.md` |
+| Financial model/projections | READ `.claude/skills/startup-financial-modeling/SKILL.md` |
+| Pricing decision | READ `.claude/skills/pricing-strategy/SKILL.md` |
+| Market sizing | READ `.claude/skills/market-sizing-analysis/SKILL.md` |
+| Competitive overview | READ `.claude/skills/competitive-landscape/SKILL.md` |
+| Business case | READ `.claude/skills/startup-business-analyst-business-case/SKILL.md` |
+| Team/hiring | READ `.claude/skills/team-composition-analysis/SKILL.md` |
+| Architecture overview | READ `.claude/skills/software-architecture/SKILL.md` |
+| Parallel agents | READ `.claude/skills/parallel-agents/SKILL.md` |

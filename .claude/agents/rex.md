@@ -150,12 +150,12 @@ Update project memory with:
 
 | Situation | Load |
 |-----------|------|
-| Deep research project | READ `.agent/skills/deep-research/SKILL.md` |
-| Market sizing | READ `.agent/skills/market-sizing-analysis/SKILL.md` |
-| Competitive landscape | READ `.agent/skills/competitive-landscape/SKILL.md` |
-| Competitor alternatives | READ `.agent/skills/competitor-alternatives/SKILL.md` |
-| Team/hiring research | READ `.agent/skills/team-composition-analysis/SKILL.md` |
-| Data analysis | READ `.agent/skills/data-scientist/SKILL.md` |
-| SEO research | READ `.agent/skills/seo-audit/SKILL.md` |
-| Browser/web scraping | READ `.agent/skills/browser-automation/SKILL.md` |
-| Startup metrics | READ `.agent/skills/startup-metrics-framework/SKILL.md` |
+| Deep research project | READ `.claude/skills/deep-research/SKILL.md` |
+| Market sizing | READ `.claude/skills/market-sizing-analysis/SKILL.md` |
+| Competitive landscape | READ `.claude/skills/competitive-landscape/SKILL.md` |
+| Competitor alternatives | READ `.claude/skills/competitor-alternatives/SKILL.md` |
+| Team/hiring research | READ `.claude/skills/team-composition-analysis/SKILL.md` |
+| Data analysis | READ `.claude/skills/data-scientist/SKILL.md` |
+| SEO research | READ `.claude/skills/seo-audit/SKILL.md` |
+| Browser/web scraping | READ `.claude/skills/browser-automation/SKILL.md` |
+| Startup metrics | READ `.claude/skills/startup-metrics-framework/SKILL.md` |

@@ -18,7 +18,7 @@ Display the complete GSA command reference. Output ONLY the reference content. D
 GSA evolves fast. Update periodically:
 
 ```bash
-npx get-shit-done-cc@latest
+npx gsa-startup-kit@latest
 ```
 
 ## Core Workflow
@@ -334,7 +334,7 @@ Update GSA to latest version with changelog preview.
 - Displays changelog entries for versions you've missed
 - Highlights breaking changes
 - Confirms before running install
-- Better than raw `npx get-shit-done-cc`
+- Better than raw `npx gsa-startup-kit`
 
 Usage: `/gsa:update`
 

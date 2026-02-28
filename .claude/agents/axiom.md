@@ -101,11 +101,11 @@ Update project memory with:
 
 | Situation | Load |
 |-----------|------|
-| Financial model | READ `.agent/skills/startup-financial-modeling/SKILL.md` |
-| Business case | READ `.agent/skills/startup-business-analyst-business-case/SKILL.md` |
-| Financial projections | READ `.agent/skills/startup-business-analyst-financial-projections/SKILL.md` |
-| Market opportunity | READ `.agent/skills/startup-business-analyst-market-opportunity/SKILL.md` |
-| Pricing strategy | READ `.agent/skills/pricing-strategy/SKILL.md` |
-| TAM/SAM/SOM | READ `.agent/skills/market-sizing-analysis/SKILL.md` |
-| Competitive landscape | READ `.agent/skills/competitive-landscape/SKILL.md` |
-| Competitor pricing | READ `.agent/skills/competitor-alternatives/SKILL.md` |
+| Financial model | READ `.claude/skills/startup-financial-modeling/SKILL.md` |
+| Business case | READ `.claude/skills/startup-business-analyst-business-case/SKILL.md` |
+| Financial projections | READ `.claude/skills/startup-business-analyst-financial-projections/SKILL.md` |
+| Market opportunity | READ `.claude/skills/startup-business-analyst-market-opportunity/SKILL.md` |
+| Pricing strategy | READ `.claude/skills/pricing-strategy/SKILL.md` |
+| TAM/SAM/SOM | READ `.claude/skills/market-sizing-analysis/SKILL.md` |
+| Competitive landscape | READ `.claude/skills/competitive-landscape/SKILL.md` |
+| Competitor pricing | READ `.claude/skills/competitor-alternatives/SKILL.md` |

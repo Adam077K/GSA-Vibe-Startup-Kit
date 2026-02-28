@@ -135,12 +135,12 @@ Update `.claude/memory/CODEBASE-MAP.md` with:
 
 | Situation | Load |
 |-----------|------|
-| Code refactoring | READ `.agent/skills/code-refactoring/SKILL.md` |
-| Codebase cleanup | READ `.agent/skills/codebase-cleanup/SKILL.md` |
-| Production audit | READ `.agent/skills/production-code-audit/SKILL.md` |
-| Architectural review | READ `.agent/skills/architect-review/SKILL.md` |
-| API documentation | READ `.agent/skills/api-documentation/SKILL.md` |
-| API doc generator | READ `.agent/skills/api-documentation-generator/SKILL.md` |
-| Error detective | READ `.agent/skills/error-detective/SKILL.md` |
-| Doc co-authoring | READ `.agent/skills/doc-coauthoring/SKILL.md` |
-| Docs architecture | READ `.agent/skills/docs-architect/SKILL.md` |
+| Code refactoring | READ `.claude/skills/code-refactoring/SKILL.md` |
+| Codebase cleanup | READ `.claude/skills/codebase-cleanup/SKILL.md` |
+| Production audit | READ `.claude/skills/production-code-audit/SKILL.md` |
+| Architectural review | READ `.claude/skills/architect-review/SKILL.md` |
+| API documentation | READ `.claude/skills/api-documentation/SKILL.md` |
+| API doc generator | READ `.claude/skills/api-documentation-generator/SKILL.md` |
+| Error detective | READ `.claude/skills/error-detective/SKILL.md` |
+| Doc co-authoring | READ `.claude/skills/doc-coauthoring/SKILL.md` |
+| Docs architecture | READ `.claude/skills/docs-architect/SKILL.md` |

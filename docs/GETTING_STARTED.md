@@ -44,7 +44,7 @@ This kit is built for students at Kfar Hayarok's youth startup school. You have:
 
 - **12 specialist agents** — Iris, Morgan, Atlas, Sage, Nova, and more
 - **938+ skills** — Load with `@skill-name` (e.g. `@brainstorming`)
-- **Workflow bundles** — See [workflow_bundles_readme.md](../workflow_bundles_readme.md)
+- **Workflow bundles** — See [workflow-bundles.md](workflow-bundles.md)
 
 ## Next Steps
 

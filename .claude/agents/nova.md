@@ -90,21 +90,21 @@ CTA:    One link
 
 | Situation | Load |
 |-----------|------|
-| SEO content writing | READ `.agent/skills/seo-content-writer/SKILL.md` |
-| SEO fundamentals | READ `.agent/skills/seo-fundamentals/SKILL.md` |
-| Keyword strategy | READ `.agent/skills/seo-keyword-strategist/SKILL.md` |
-| Content calendar | READ `.agent/skills/seo-content-planner/SKILL.md` |
-| Content audit | READ `.agent/skills/seo-content-auditor/SKILL.md` |
-| Meta tags | READ `.agent/skills/seo-meta-optimizer/SKILL.md` |
-| Full SEO audit | READ `.agent/skills/seo-audit/SKILL.md` |
-| Copywriting | READ `.agent/skills/copywriting/SKILL.md` |
-| Copy editing | READ `.agent/skills/copy-editing/SKILL.md` |
-| Content creation | READ `.agent/skills/content-creator/SKILL.md` |
-| Email systems | READ `.agent/skills/email-systems/SKILL.md` |
-| Marketing psychology | READ `.agent/skills/marketing-psychology/SKILL.md` |
-| Marketing ideas | READ `.agent/skills/marketing-ideas/SKILL.md` |
-| CRO / conversion | READ `.agent/skills/page-cro/SKILL.md` |
-| Free tool strategy | READ `.agent/skills/free-tool-strategy/SKILL.md` |
-| SendGrid automation | READ `.agent/skills/sendgrid-automation/SKILL.md` |
-| Zapier/Make | READ `.agent/skills/zapier-make-patterns/SKILL.md` |
-| Schema markup | READ `.agent/skills/schema-markup/SKILL.md` |
+| SEO content writing | READ `.claude/skills/seo-content-writer/SKILL.md` |
+| SEO fundamentals | READ `.claude/skills/seo-fundamentals/SKILL.md` |
+| Keyword strategy | READ `.claude/skills/seo-keyword-strategist/SKILL.md` |
+| Content calendar | READ `.claude/skills/seo-content-planner/SKILL.md` |
+| Content audit | READ `.claude/skills/seo-content-auditor/SKILL.md` |
+| Meta tags | READ `.claude/skills/seo-meta-optimizer/SKILL.md` |
+| Full SEO audit | READ `.claude/skills/seo-audit/SKILL.md` |
+| Copywriting | READ `.claude/skills/copywriting/SKILL.md` |
+| Copy editing | READ `.claude/skills/copy-editing/SKILL.md` |
+| Content creation | READ `.claude/skills/content-creator/SKILL.md` |
+| Email systems | READ `.claude/skills/email-systems/SKILL.md` |
+| Marketing psychology | READ `.claude/skills/marketing-psychology/SKILL.md` |
+| Marketing ideas | READ `.claude/skills/marketing-ideas/SKILL.md` |
+| CRO / conversion | READ `.claude/skills/page-cro/SKILL.md` |
+| Free tool strategy | READ `.claude/skills/free-tool-strategy/SKILL.md` |
+| SendGrid automation | READ `.claude/skills/sendgrid-automation/SKILL.md` |
+| Zapier/Make | READ `.claude/skills/zapier-make-patterns/SKILL.md` |
+| Schema markup | READ `.claude/skills/schema-markup/SKILL.md` |

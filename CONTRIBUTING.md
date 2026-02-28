@@ -23,7 +23,7 @@ Thank you for contributing to the Green Startup Academy Startup Kit!
 
 ### Workflow Bundles
 
-- **Workflow bundles:** Document in `workflow_bundles_readme.md` and `.agent/skills/docs/WORKFLOWS.md`
+- **Workflow bundles:** Document in `docs/workflow-bundles.md` and `.agent/skills/docs/WORKFLOWS.md`
 
 ## Pull Request Process
 

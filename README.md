@@ -45,7 +45,7 @@ A production-ready AI agent kit for building startups. Built for [Green Startup 
 
 - Browse: [.agent/skills/README.md](.agent/skills/README.md)
 - Bundles: [.agent/skills/docs/BUNDLES.md](.agent/skills/docs/BUNDLES.md)
-- Workflows: [workflow_bundles_readme.md](workflow_bundles_readme.md)
+- Workflows: [docs/workflow-bundles.md](docs/workflow-bundles.md)
 
 ## Requirements
 

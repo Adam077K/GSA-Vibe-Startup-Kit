@@ -99,14 +99,14 @@ Update project memory with:
 
 | Situation | Load |
 |-----------|------|
-| Data science | READ `.agent/skills/data-scientist/SKILL.md` |
-| Data engineering | READ `.agent/skills/data-engineer/SKILL.md` |
-| DB architecture | READ `.agent/skills/database-architect/SKILL.md` |
-| DB design | READ `.agent/skills/database-design/SKILL.md` |
-| SQL optimization | READ `.agent/skills/sql-optimization-patterns/SKILL.md` |
-| PostgreSQL optimization | READ `.agent/skills/postgresql-optimization/SKILL.md` |
-| dbt transformations | READ `.agent/skills/dbt-transformation-patterns/SKILL.md` |
-| Segment CDP | READ `.agent/skills/segment-cdp/SKILL.md` |
-| Similarity search | READ `.agent/skills/similarity-search-patterns/SKILL.md` |
-| LLM evaluation metrics | READ `.agent/skills/llm-evaluation/SKILL.md` |
-| Startup metrics | READ `.agent/skills/startup-metrics-framework/SKILL.md` |
+| Data science | READ `.claude/skills/data-scientist/SKILL.md` |
+| Data engineering | READ `.claude/skills/data-engineer/SKILL.md` |
+| DB architecture | READ `.claude/skills/database-architect/SKILL.md` |
+| DB design | READ `.claude/skills/database-design/SKILL.md` |
+| SQL optimization | READ `.claude/skills/sql-optimization-patterns/SKILL.md` |
+| PostgreSQL optimization | READ `.claude/skills/postgresql-optimization/SKILL.md` |
+| dbt transformations | READ `.claude/skills/dbt-transformation-patterns/SKILL.md` |
+| Segment CDP | READ `.claude/skills/segment-cdp/SKILL.md` |
+| Similarity search | READ `.claude/skills/similarity-search-patterns/SKILL.md` |
+| LLM evaluation metrics | READ `.claude/skills/llm-evaluation/SKILL.md` |
+| Startup metrics | READ `.claude/skills/startup-metrics-framework/SKILL.md` |
