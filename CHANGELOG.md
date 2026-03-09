@@ -20,4 +20,26 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.0] — 2026-03-09
+
+### Changed
+- Agent system upgraded from 12-agent flat team to 3-layer CEO → Team Leads → Workers architecture
+- CEO replaces Iris as entry point for all tasks
+- 9 named Team Leads replace individual named agents (iris→ceo, atlas→build-lead, etc.)
+- 9 Worker agents + 12 GSD execution agents replace old gsa-* execution agents
+- Slash commands expanded: added `/build`, `/fix`, `/design`, `/review`
+- README, QUICK_REFERENCE, GETTING_STARTED updated to reflect new architecture
+- package.json version bumped to 1.1.0, repository URL fixed, Cursor removed from keywords
+
+### Removed
+- `.cursor/rules/` folder — Cursor integration removed; Claude Code + Antigravity are primary tools
+- `.vscode/settings.json` — not needed for public kit
+- `all_skills_stored/` excluded via .gitignore (55MB stale backup; live skills remain at `.agent/skills/`)
+
+### Fixed
+- package.json repository URL (was `YOUR_ORG` placeholder, now points to correct repo)
+- Old agent name references (Iris, Atlas, Morgan, etc.) across all public docs
+
+---
+
 *Older entries will be added as the kit evolves.*

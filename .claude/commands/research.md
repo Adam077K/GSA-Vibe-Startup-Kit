@@ -1,44 +1,66 @@
 # /research — Deep Research Mode
 
-Rex conducts structured research and returns a sourced intelligence report.
+Deep, sourced research on any topic.
 
 ## Usage
 ```
-/research [topic] [type: market|competitor|technology|user]
-/research [topic] --depth [overview|deep]
+/research [topic or question]
 ```
 
-## Examples
+## What This Does
+
+### Step 1 — Research Lead Intake
+Research Lead reads USER-INSIGHTS.md (to build on prior research), clarifies:
+- Is this competitive? market? technical? user research?
+- Overview or deep-dive?
+- What decision will this research inform?
+
+### Step 2 — Decompose into Parallel Threads
+Research Lead breaks question into 2-4 specific threads:
+- Thread 1: [specific question 1]
+- Thread 2: [specific question 2]
+- Thread 3: [specific question 3]
+
+### Step 3 — Dispatch Researchers
+Researcher workers run in parallel (each on one thread). Each researcher:
+1. Checks Context7 for technical docs
+2. Fetches official documentation
+3. WebSearch for market/competitive info (multiple sources)
+4. Returns structured findings with sources + confidence levels
+
+### Step 4 — Synthesis
+Research Lead synthesizes all findings into a structured report.
+
+### Step 5 — Output
 
 ```
-/research "vertical SaaS for dentists" market
-/research "Linear vs Jira vs Height" competitor
-/research "tRPC vs GraphQL vs REST" technology
-/research "why users churn in week 2" user
+## Research Report: [Topic]
+
+### Key Findings
+- [Finding] — Source: [URL] — Confidence: HIGH
+- [Finding] — Source: [URL] — Confidence: MEDIUM
+
+### Implications
+- [What this means for your project]
+- [What decisions this informs]
+
+### Gaps
+- [What couldn't be verified]
+- [What additional research would help]
+
+### Overall Confidence: HIGH / MEDIUM / LOW
+[Rationale]
+
+### Sources
+1. [URL] — [description]
+2. [URL] — [description]
 ```
 
-## How Rex Works
+### Step 6 — Memory Update
+If user/market insights found: Research Lead updates `.claude/memory/USER-INSIGHTS.md`.
 
-Rex applies scientific research discipline:
-1. **Strip assumptions** — start from verifiable facts only
-2. **Multiple sources** — never conclude from a single source
-3. **Rate everything** — ★★★ primary / ★★ secondary / ★ tertiary / [?] unverified
-4. **Name conflicts** — when sources disagree, investigate the conflict
-5. **Mark gaps honestly** — [?] is a valid finding, never smoothed over
-
-## Output
-
-Rex delivers:
-- **Key Findings** — sourced, most important first
-- **Evidence** — by subtopic with source ratings
-- **Conflicts / Gaps** — where data is uncertain or conflicting
-- **Implications** — addressed to Morgan / Nova / Axiom / Atlas
-
-Customer language discovered → saved to `.claude/memory/USER-INSIGHTS.md`
-
-## Depth Guide
-
-```
-overview:  30-45 min, 3-5 key findings, actionable summary
-deep:      60-90 min, full evidence map, competitor pricing (dated), JTBD language
-```
+## Notes
+- Every claim has a source — no unsourced statements
+- Confidence levels are required for every key finding
+- Research Lead uses Opus 4.6 for synthesis quality
+- Researchers can run in parallel — report takes same time as longest single thread

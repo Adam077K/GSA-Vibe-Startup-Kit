@@ -5,10 +5,26 @@
 
 ## The Team
 
-This project has a 12-agent autonomous startup team. Each agent has a dedicated role. See `AGENTS.md` for the full roster and routing table.
+This project runs a 3-layer autonomous startup team. **Start every task with the CEO agent.**
 
-**How to start any session:** "Iris, [what I need]"
-**Slash commands:** `/daily` `/plan` `/ship` `/audit` `/research`
+```
+Layer 1 ── CEO
+              │ Entry point for ALL tasks. Questions → team assembly → delegate → synthesize.
+              │
+Layer 2 ── Team Leads (9 fixed)
+              │ build-lead | research-lead | design-lead | qa-lead | devops-lead
+              │ data-lead  | product-lead  | growth-lead | business-lead
+              │
+Layer 3 ── Workers (9 new + 12 gsd-* execution agents)
+              backend-developer | frontend-developer | database-engineer | ai-engineer
+              security-engineer | test-engineer | code-reviewer | researcher | technical-writer
+              + gsd-executor | gsd-planner | gsd-debugger | gsd-verifier | [8 others]
+```
+
+**How to start any session:** Talk to CEO directly, or use a slash command.
+**Slash commands:** `/build` `/fix` `/design` `/review` `/daily` `/plan` `/ship` `/audit` `/research`
+
+See `AGENTS.md` for the full routing table.
 
 ---
 
@@ -16,9 +32,16 @@ This project has a 12-agent autonomous startup team. Each agent has a dedicated 
 
 This project includes **938+ expert skills** at `.agent/skills/[skill-name]/SKILL.md`.
 
-Agents load skills on demand: `READ .agent/skills/[skill-name]/SKILL.md`
+**Skills load on-demand — never preload:**
+```bash
+# Step 1: Read .agent/skills/MANIFEST.json — filter by tags matching task domain
+# Step 2: Load 1-2 matching .agent/skills/[name]/SKILL.md files only
+# Never use ls | grep directly — 423 skills makes grep unreliable
+```
 
-**Source:** See [SKILLS_SOURCE.md](SKILLS_SOURCE.md) for upstream (antigravity-awesome-skills) and update instructions.
+**Canonical discovery:** Read `.agent/skills/MANIFEST.json` and filter by tags. Never `ls | grep`.
+
+**Source:** See [SKILLS_SOURCE.md](SKILLS_SOURCE.md) for upstream and update instructions.
 
 Skill categories available:
 - **AI/ML:** ai-engineer, rag-engineer, langgraph, prompt-engineering, voice-agents, multi-agent-patterns, and 50+ more
@@ -53,69 +76,127 @@ Vector DB:  Pinecone (prod) / pgvector (early)
 
 ## Memory
 
-| File | Purpose |
-|------|---------|
-| `.claude/memory/DECISIONS.md` | Architecture + strategy decisions with rationale |
-| `.claude/memory/CODEBASE-MAP.md` | Key files, patterns, tech debt (updated by Scout) |
-| `.claude/memory/USER-INSIGHTS.md` | Customer language, pain points, JTBD (updated by Rex) |
+| File | Purpose | Updated by |
+|------|---------|-----------|
+| `.claude/memory/DECISIONS.md` | Architecture + strategy decisions with rationale | Any agent making a decision |
+| `.claude/memory/CODEBASE-MAP.md` | Key files, patterns, tech debt | Code Reviewer |
+| `.claude/memory/USER-INSIGHTS.md` | Customer language, pain points, JTBD | Research Lead |
+| `.claude/memory/LONG-TERM.md` | Cross-session facts: user prefs, project patterns, recurring issues | CEO after each session |
+| `.claude/memory/sessions/` | Team lead session summaries (YYYY-MM-DD-[lead]-[task].md) | Each team lead |
+| `.claude/memory/specs/` | Product specs written by Product Lead | Product Lead |
 
 ---
 
-## Models (February 2026)
+## MCPs
 
-| Tier | Model | Use for | Cost |
-|------|-------|---------|------|
-| **Sonnet 4.6** | `claude-sonnet-4-6` | Daily work: atlas, iris, morgan, nova, axiom, lyra, scout, nexus, spark | $3/M in · $15/M out |
-| **Opus 4.6** | `claude-opus-4-6` | Depth work: sage (AI), guardian (security), rex (research) | $5/M in · $25/M out |
-| **Haiku 4.5** | `claude-haiku-4-5` | Fast subagents: simple classification, test running, log parsing | $1/M in · $5/M out |
+| MCP | When to use |
+|-----|------------|
+| **Supabase** (`mcp__supabase__*`) | Always — if project uses Supabase, database workers MUST use MCP tools |
+| **Pencil** (`mcp__pencil__*`) | Design Lead + Frontend Developer — check availability first. If available: use for UI. If not: skip gracefully. |
+| **Playwright** (`mcp__playwright__*`) | Test Engineer — browser automation, E2E validation, screenshot testing |
+| **Context7** (`mcp__context7__*`) | Researcher + Phase Researcher — library docs, API references |
+
+---
+
+## Models (March 2026)
+
+| Tier | Model | Use for |
+|------|-------|---------|
+| **Sonnet 4.6** | `claude-sonnet-4-6` | All team leads + most workers (default) |
+| **Opus 4.6** | `claude-opus-4-6` | Research Lead, Researcher, AI Engineer (depth work) |
+| **Haiku 4.5** | `claude-haiku-4-5` | Simple subagent tasks: log parsing, classification |
+
+CEO recommends model per task. Sonnet handles 80%+ at 3x lower cost than Opus.
+
+---
+
+## Context Budget Enforcement (All Agents)
+
+Hard limits — never exceed:
+- `DECISIONS.md`: Max 50 entries. Archive older ones to `DECISIONS_ARCHIVE.md` when full.
+- `LONG-TERM.md`: Max 100 lines total. Compress quarterly.
+- Session summaries: Max 10 lines each (use YAML schema defined in CEO memory_update step).
+- Agent handoffs: Summarize, never pass raw conversation history. Max 500 tokens per handoff.
+- Skills per task: Max 2 loaded. Never preload.
+
+**Turn efficiency — CRITICAL:**
+- maxTurns is a safety ceiling, NOT a target. Use as few turns as needed.
+- Batch tool calls: read multiple files in one turn, not one per turn
+- Don't re-read files you already have in context
+- Complete the task and stop — do not pad with unnecessary checks or summaries
+
+Skills discovery — ALL agents MUST follow this pattern:
+1. Read `.agent/skills/MANIFEST.json` — filter entries where tags match the task domain
+2. Load 1-2 matching `.agent/skills/[name]/SKILL.md` files only
+3. Never use `ls | grep` on the skills directory directly
+
+---
+
+## Model Routing Rules (All Agents)
+
+CEO specifies model in every worker brief. Workers default to Sonnet if not specified.
+
+| Task type | Model | Who uses it |
+|-----------|-------|-------------|
+| Test execution, lint checks, log parsing, file classification | `claude-haiku-4-5` | test-engineer, simple verification tasks |
+| Feature implementation, API design, code review, orchestration | `claude-sonnet-4-6` (default) | all leads + most workers |
+| Security audits, deep research synthesis, complex AI/RAG design | `claude-opus-4-6` | security-engineer (audits), researcher, ai-engineer |
 
 ---
 
 ## Cost Optimization Rules (All Agents)
 
 **Context discipline — most impactful:**
-- Use `/clear` between unrelated tasks — prevents stale context, saves 40-70%
+- Use `/clear` between unrelated tasks — saves 40-70%
 - Use `/compact` when context gets long on a single task
-- Skills load **on-demand only** — never preload; each `READ skill` costs tokens
-- Load only the 1-2 skills actually needed per task, not all possible skills
+- Skills load **on-demand only** — never preload
+- Load only the 1-2 skills actually needed, not all possible
 
 **Model discipline:**
-- Sonnet 4.6 handles 80%+ of tasks at 3x lower cost than Opus — default to it
-- Only escalate to Opus when genuinely needed: security audits, complex AI reasoning, deep synthesis
-- For simple subagent tasks (run tests, check lint, fetch docs) use Haiku explicitly
+- Sonnet 4.6 is the default — only escalate to Opus when genuinely needed
+- Haiku for fast subagent tasks (log parsing, lint, test run)
 
 **Delegation discipline:**
-- Subagents run isolated contexts — verbose output (logs, test results) stays in subagent
-- Pass *summaries* back to main agent, not raw data dumps
-- `maxTurns` is set on all agents — respects it, don't try to extend loops
-- Use memory files (`.claude/memory/*.md`) as shared state instead of passing large contexts
-
-**Prompt caching (automatic):**
-- System prompts are cached automatically — stable instructions reuse at 10% of input cost
-- Keep agent instructions stable and structured (cached after first run)
-- Don't randomize or vary instructions — breaks caching
+- Subagents run isolated contexts — pass summaries back, not raw data dumps
+- Use memory files (`.claude/memory/*.md`) as shared state
 
 ---
 
 ## Rules (All Agents)
 
 1. **Read before acting** — Glob/Grep before creating; check memory before decisions
-2. **Delegate correctly** — Check AGENTS.md; never do work outside your domain
-3. **Source claims** — Rex sources; agents don't invent data
+2. **Own your domain** — Don't do work that belongs to another agent
+3. **Source claims** — Researchers source; no agent invents data
 4. **Leave breadcrumbs** — Update DECISIONS.md when making choices that affect others
 5. **Iterate, don't overwrite** — Understand existing code before replacing
-6. **Context discipline** — Follow cost optimization rules above on every session
+6. **No placeholder UI** — Zero tolerance for stub components or TODO comments in deliverables
+7. **Worktrees for code** — Every code worker creates a worktree before touching files
+8. **QA gate is sacred** — No merge without QA Lead PASS + user confirmation
+
+---
+
+## Git Worktree Protocol
+
+All code workers follow this:
+```bash
+git worktree add .worktrees/[task-name] -b feat/[task-name]
+# work in .worktrees/[task-name]
+# atomic commits: feat(scope): description
+# signal completion to lead: branch + files + 2-line summary
+```
+
+`.worktrees/` is in `.gitignore`.
 
 ---
 
 ## Project State
 
-*[Update this section as the project evolves. Use as template for new projects.]*
+*[Update this section as the project evolves]*
 
-- **Current focus:** [e.g., "Building MVP auth + core feature"]
-- **Active sprint:** [e.g., "Week 1 — Foundation"]
-- **Blockers:** [e.g., "None"]
-- **Next milestone:** [e.g., "First paying customer"]
+- **Current focus:** Building startups with the 3-layer agent system
+- **Active sprint:** Released — ready for public use
+- **Blockers:** None
+- **Next milestone:** Community feedback and iteration
 
 ---
 
@@ -124,4 +205,4 @@ Vector DB:  Pinecone (prod) / pgvector (early)
 *[Add project-specific conventions here]*
 
 - [ ] Update when making architectural decisions
-- [ ] Update after first Scout audit
+- [ ] Update after first Code Reviewer audit

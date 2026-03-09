@@ -1,6 +1,6 @@
 # /daily — Daily Planning Kickoff
 
-Start the day with Iris. Get focused, unblocked, and moving.
+Start the day with context loaded and priorities clear.
 
 ## Usage
 ```

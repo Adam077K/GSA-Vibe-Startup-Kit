@@ -1,7 +1,7 @@
 {
   "name": "gsa-startup-kit",
-  "version": "1.0.0",
-  "description": "AI Agent Kit for Claude Code, Cursor & Antigravity — 12-agent startup team with GSA workflow",
+  "version": "1.1.0",
+  "description": "AI Agent Kit for Claude Code & Antigravity — 3-layer autonomous startup team (CEO, Leads, Workers) with 938+ expert skills",
   "bin": {
     "gsa-startup-kit": "bin/install.js"
   },
@@ -13,7 +13,6 @@
     ".claude/hooks/",
     ".claude/package.json",
     ".claude/settings.json",
-    ".cursor/",
     ".agent/",
     "docs/",
     "AGENTS.md",
@@ -28,7 +27,6 @@
   "keywords": [
     "ai-agents",
     "claude-code",
-    "cursor",
     "antigravity",
     "startup-kit",
     "agent-kit",
@@ -38,7 +36,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_ORG/gsa-startup-kit"
+    "url": "https://github.com/Adam077K/GSA-Vibe-Startup-Kit"
   },
-  "homepage": "https://github.com/YOUR_ORG/gsa-startup-kit#readme"
+  "homepage": "https://github.com/Adam077K/GSA-Vibe-Startup-Kit#readme"
 }

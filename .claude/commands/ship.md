@@ -1,6 +1,6 @@
 # /ship — Pre-Deploy Pipeline
 
-Run the full quality + security gate before production deploy.
+Full quality gate + deploy pipeline for production. Requires QA Lead PASS before any deploy.
 
 ## Usage
 ```

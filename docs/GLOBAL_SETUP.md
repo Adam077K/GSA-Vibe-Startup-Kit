@@ -1,3 +1,45 @@
+# Global Setup — GSA Startup Kit
+
+Claude Code loads agents from two locations (project-local takes priority):
+- **Project-local:** `./.claude/agents/` — available only in that project
+- **Global:** `~/.claude/agents/` — available in every project on your machine
+
+## Global Install (recommended for daily use)
+```bash
+npx gsa-startup-kit --claude --global
+```
+Copies all agents, commands, get-shit-done workflows, and hooks into `~/.claude/`.
+Claude Code will use these automatically in every project — no per-project setup needed.
+
+## Local Install (per project)
+```bash
+# In your project folder:
+npx gsa-startup-kit --claude
+```
+Files go into `./.claude/` for that project only.
+
+## Manual Global Setup
+```bash
+cp -r .claude/agents/* ~/.claude/agents/
+cp -r .claude/commands ~/.claude/
+cp -r .claude/get-shit-done ~/.claude/
+cp -r .claude/hooks ~/.claude/
+```
+
+## New Project Using Global Agents
+```bash
+mkdir -p my-project/.claude
+cd my-project
+# Symlink to global agents (stays synced automatically)
+ln -sf ~/.claude/agents .claude/agents
+ln -sf ~/.claude/commands .claude/commands
+# Copy project-specific context files
+cp /path/to/gsa-startup-kit/CLAUDE.md .
+cp /path/to/gsa-startup-kit/AGENTS.md .
+```
+
+---
+
 # GSA — הגדרה גלובלית (Global Setup)
 
 מדריך להעברת Skills, Agents ו-Rules לגלובליים — זמינים בכל פרויקט במחשב.
@@ -8,12 +50,10 @@
 
 | רכיב | מיקום נוכחי (פרויקט) | מיקום גלובלי מומלץ |
 |------|---------------------|---------------------|
-| Skills (938+) | `.agent/skills/` | `~/.agent/skills/` |
-| Agents (12 + GSA) | `.claude/agents/` | `~/.claude/agents/` |
+| Skills (938+) | `.claude/skills/` | `~/.claude/skills/` |
+| Agents (31) | `.claude/agents/` | `~/.claude/agents/` |
 | Get-Shit-Done | `.claude/get-shit-done/` | `~/.claude/get-shit-done/` |
 | Commands | `.claude/commands/` | `~/.claude/commands/` |
-| Rules | `.cursor/rules/` | Cursor Settings / `~/.cursor/rules/` |
-| Cursor Agent Skills | — | `~/.cursor/skills/` (כבר גלובלי) |
 
 ---
 

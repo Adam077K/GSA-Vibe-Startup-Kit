@@ -12,13 +12,13 @@ Thank you for contributing to the Green Startup Academy Startup Kit!
 
 ### Agents
 
-- **Modify agents:** Edit files in `.claude/agents/` (e.g. `iris.md`, `atlas.md`)
+- **Modify agents:** Edit files in `.claude/agents/` (e.g. `ceo.md`, `build-lead.md`)
 - **Add an agent:** Add the agent file and update `AGENTS.md` with routing and slash commands
 
 ### Documentation
 
 - **README:** Keep the root README GSA-focused; skills docs live in `.agent/skills/`
-- **Hebrew docs:** `docs/GETTING_STARTED_HE.md` — improve onboarding for כפר הירוק students
+- **Hebrew docs:** `docs/GETTING_STARTED.md` — improve onboarding for כפר הירוק students
 - **Quick reference:** Update `docs/QUICK_REFERENCE.md` when adding commands or agents
 
 ### Workflow Bundles
@@ -30,7 +30,7 @@ Thank you for contributing to the Green Startup Academy Startup Kit!
 1. Fork the repository
 2. Create a branch (`git checkout -b feature/my-change`)
 3. Make your changes
-4. Ensure existing behavior works (open in Claude Code / Cursor / Antigravity)
+4. Ensure existing behavior works (open in Claude Code / Antigravity)
 5. Submit a Pull Request with a clear description
 
 ## Code of Conduct

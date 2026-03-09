@@ -16,22 +16,25 @@ Choose one:
 | Tool | How to Open |
 |------|-------------|
 | **Claude Code** | Open the folder; CLAUDE.md loads automatically |
-| **Cursor** | File → Open Folder → select the kit folder |
 | **Antigravity** | Open the folder as workspace; skills load from `.agent/skills/` |
 
 ## 3. Start Building
 
 In the chat, type:
 
-- **English:** "Iris, I want to build [your idea]"
-- **Hebrew:** "Iris, אני רוצה לבנות [הרעיון שלך]"
+- **English:** "CEO, I want to build [your idea]"
+- **Hebrew:** "CEO, אני רוצה לבנות [הרעיון שלך]"
 
-Iris (the orchestrator) will route your work to specialist agents.
+The CEO agent will read your project context, ask clarifying questions, and route work to the right team.
 
 ## Slash Commands
 
 | Command | What it does |
 |---------|--------------|
+| `/build [feature]` | Build a new feature end-to-end |
+| `/fix [issue]` | Debug and fix a problem |
+| `/design [screen]` | Design a UI screen or component |
+| `/review` | Code review + security check |
 | `/daily` | Morning planning — today's focus |
 | `/plan [goal]` | Sprint or feature planning |
 | `/ship [feature]` | Pre-deploy: review → test → deploy |
@@ -42,7 +45,7 @@ Iris (the orchestrator) will route your work to specialist agents.
 
 This kit is built for students at Kfar Hayarok's youth startup school. You have:
 
-- **12 specialist agents** — Iris, Morgan, Atlas, Sage, Nova, and more
+- **31 agents** — CEO, 9 Team Leads, 9 Workers, 12 GSD execution agents
 - **938+ skills** — Load with `@skill-name` (e.g. `@brainstorming`)
 - **Workflow bundles** — See [workflow-bundles.md](workflow-bundles.md)
 

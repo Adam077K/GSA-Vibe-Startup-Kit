@@ -12,6 +12,15 @@
 .DS_Store
 Thumbs.db
 
+# Git worktrees (agent isolated work branches)
+.worktrees/
+
+# Large skills backup directory (use .agent/skills/ instead)
+all_skills_stored/
+
+# Local Claude permissions (machine-specific)
+.claude/settings.local.json
+
 # IDE / tool caches (keep config, ignore caches)
 .claude/memory/*.local.md
 .planning/state.local.json
