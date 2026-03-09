@@ -20,6 +20,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.1] — 2026-03-10
+
+### Changed
+- Migrated agents from `.claude/agents/` to `.agent/agents/` (31 agent definitions)
+- Migrated commands from `.claude/commands/gsa/` to `.agent/commands/`
+- Added `.agent/hooks/` (gsa-check-update, gsa-context-monitor, gsa-statusline)
+- Added `.agent/memory/AUDIT_LOG.md`, `LONG-TERM.md`
+
+### Removed
+- `.claude/get-shit-done/` — GSD tooling removed; workflow moved to `.agent/`
+- `.claude/agents/archive/` — archived agents consolidated
+- `.claude/commands/gsa/` — commands migrated to `.agent/commands/`
+- Duplicate `workflow-*README.md` files from skills
+
+---
+
 ## [1.1.0] — 2026-03-09
 
 ### Changed

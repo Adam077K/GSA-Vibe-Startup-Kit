@@ -4,7 +4,7 @@
 
 ---
 
-## Project: GSA Startup Kit
+## Project: [Project Name]
 
 **Last updated:** [DATE]
 **Updated by:** [Agent]
@@ -22,9 +22,9 @@
 | File | Purpose |
 |------|---------|
 | `CLAUDE.md` | Project context for all agents |
-| `AGENTS.md` | Agent routing table and skill map |
-| `.claude/agents/*.md` | All 12 agent definitions |
-| `.agent/skills/` | 938+ skills from antigravity repo |
+| `AGENTS.md` | Agent routing table |
+| `.agent/agents/*.md` | All agent definitions (CEO + leads + workers) |
+| `.agent/skills/` | 430 GSA skills — discover via MANIFEST.json |
 
 *Scout: expand this table after `/audit`*
 
