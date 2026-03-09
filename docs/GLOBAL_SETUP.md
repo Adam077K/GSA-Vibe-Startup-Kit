@@ -50,7 +50,7 @@ cp /path/to/gsa-startup-kit/AGENTS.md .
 
 | רכיב | מיקום נוכחי (פרויקט) | מיקום גלובלי מומלץ |
 |------|---------------------|---------------------|
-| Skills (938+) | `.claude/skills/` | `~/.claude/skills/` |
+| Skills (426+) | `.claude/skills/` | `~/.claude/skills/` |
 | Agents (31) | `.claude/agents/` | `~/.claude/agents/` |
 | Get-Shit-Done | `.claude/get-shit-done/` | `~/.claude/get-shit-done/` |
 | Commands | `.claude/commands/` | `~/.claude/commands/` |

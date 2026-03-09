@@ -46,7 +46,7 @@ The CEO agent will read your project context, ask clarifying questions, and rout
 This kit is built for students at Kfar Hayarok's youth startup school. You have:
 
 - **31 agents** — CEO, 9 Team Leads, 9 Workers, 12 GSD execution agents
-- **938+ skills** — Load with `@skill-name` (e.g. `@brainstorming`)
+- **426+ skills** — Load with `@skill-name` (e.g. `@brainstorming`)
 - **Workflow bundles** — See [workflow-bundles.md](workflow-bundles.md)
 
 ## Next Steps

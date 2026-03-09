@@ -60,7 +60,7 @@ See [docs/GLOBAL_SETUP.md](docs/GLOBAL_SETUP.md) for manual setup instructions.
 ## What's Inside
 
 - **31 agents** — CEO (entry point), 9 Team Leads, 9 Workers, 12 GSD execution agents
-- **938+ skills** — Expert knowledge for planning, coding, security, SEO, and more
+- **426+ skills** — Expert knowledge for planning, coding, security, SEO, and more
 - **Get-Shit-Done** workflows — Phase planning, execution, verification
 
 ### The 3-Layer Team
@@ -81,7 +81,7 @@ Layer 3 ── Workers (21)
 
 See [AGENTS.md](AGENTS.md) for the full routing table and examples.
 
-## Skills (938+)
+## Skills (426+)
 
 - Browse: [.agent/skills/README.md](.agent/skills/README.md)
 - Bundles: [.agent/skills/docs/BUNDLES.md](.agent/skills/docs/BUNDLES.md)

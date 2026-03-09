@@ -1,6 +1,6 @@
 # Skills Directory
 
-**Welcome to the skills folder!** This is where all 938+ specialized AI skills live.
+**Welcome to the skills folder!** This is where all 426+ specialized AI skills live.
 
 ## 🤔 What Are Skills?
 
@@ -115,7 +115,7 @@ ls skills/ | grep "keyword"
 ```
 
 ### Method 3: Check the main README
-See the [main README](../../README.md) for the complete list of all 938+ skills organized by category.
+See the [main README](../../README.md) for the complete list of all 426+ skills organized by category.
 
 ---
 

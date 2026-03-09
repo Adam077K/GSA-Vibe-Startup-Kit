@@ -30,13 +30,13 @@ See `AGENTS.md` for the full routing table.
 
 ## Skills Library
 
-This project includes **938+ expert skills** at `.agent/skills/[skill-name]/SKILL.md`.
+This project includes **426+ expert skills** at `.agent/skills/[skill-name]/SKILL.md`.
 
 **Skills load on-demand — never preload:**
 ```bash
 # Step 1: Read .agent/skills/MANIFEST.json — filter by tags matching task domain
 # Step 2: Load 1-2 matching .agent/skills/[name]/SKILL.md files only
-# Never use ls | grep directly — 423 skills makes grep unreliable
+# Never use ls | grep directly — 426 skills makes grep unreliable
 ```
 
 **Canonical discovery:** Read `.agent/skills/MANIFEST.json` and filter by tags. Never `ls | grep`.

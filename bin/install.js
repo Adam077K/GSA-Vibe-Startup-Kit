@@ -161,7 +161,7 @@ function installClaude(targetDir, force, dryRun) {
   copyFile(path.join(PKG_DIR, 'AGENTS.md'),      path.join(targetDir, 'AGENTS.md'),      false, dryRun);
   copyFile(path.join(PKG_DIR, 'SKILLS_SOURCE.md'), path.join(targetDir, 'SKILLS_SOURCE.md'), false, dryRun);
 
-  // skills — placeholder dir; install 938+ skills here via antigravity-awesome-skills
+  // skills — placeholder dir; install 426+ skills here via antigravity-awesome-skills
   const skillsDest = path.join(dest, 'skills');
   if (!dryRun) fs.mkdirSync(skillsDest, { recursive: true });
   log.info(`Skills not bundled (55MB+). Install to .claude/skills/ with:`);

@@ -1,4 +1,4 @@
-# Skills library — too large for npm package (55MB, 938 folders)
+# Skills library — too large for npm package (55MB, 426 folders)
 # Users install separately: npx antigravity-awesome-skills
 .agent/skills/
 
