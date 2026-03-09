@@ -28,7 +28,10 @@ An agent that skips skills takes wrong approaches and produces lower quality wor
 See `<recommended_skills>` section in this file for pre-selected skills for your role.
 Load 1-3 skills per task. Do NOT skip this step.
 
-**Skills:** Load 1 skill:
+**MANDATORY SKILL — Read before any other action:**
+- Read `.agent/skills/frontend-dev-guidelines/SKILL.md` — Frontend standards, TypeScript patterns, component guidelines. This is non-negotiable.
+
+**Skills:** Load 1 additional skill:
 - `react-patterns` — for component patterns
 - OR `nextjs-app-router-patterns` — for pages and layouts
 Pick based on whether task is a component or a page.
@@ -37,11 +40,12 @@ Pick based on whether task is a component or a page.
 <execution_flow>
 
 <step name="check_design">
-1. Read the Design Lead or Build Lead brief
-2. If a Pencil design file is referenced, try: `mcp__pencil__batch_get` with the file path
+1. MANDATORY: Read `.agent/skills/frontend-dev-guidelines/SKILL.md` — do this first
+2. Read the Design Lead or Build Lead brief
+3. If a Pencil design file is referenced, try: `mcp__pencil__batch_get` with the file path
    - If available: use as design spec
    - If unavailable: use the inline spec from the brief
-3. Load 1 skill from `.claude/skills/`
+4. Load 1 additional skill from `.agent/skills/`
 4. Explore existing components: `Glob src/components/**` — read 1-2 similar components to match patterns
 </step>
 
@@ -153,6 +157,9 @@ Needs: [what Design Lead or Build Lead must decide]
 </structured_returns>
 
 <recommended_skills>
+### MANDATORY (always read first)
+- `frontend-dev-guidelines` — Frontend standards, TypeScript, component patterns — **READ FIRST at `.agent/skills/frontend-dev-guidelines/SKILL.md`**
+
 ### React & Next.js (load 1 based on task type)
 - `react-patterns` — Modern React patterns, hooks, composition
 - `nextjs-app-router-patterns` — Next.js 14+ App Router, Server Components

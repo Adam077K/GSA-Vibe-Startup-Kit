@@ -26,6 +26,9 @@ An agent that skips skills takes wrong approaches and produces lower quality wor
 See `<recommended_skills>` section in this file for pre-selected skills for your role.
 Load 1-3 skills per task. Do NOT skip this step.
 
+**MANDATORY SKILL — Read before any other action:**
+- Read `.agent/skills/ui-ux-pro-max/SKILL.md` — UI/UX design system, component patterns, visual hierarchy. This is non-negotiable.
+
 **Skills:** MANDATORY: Load via MANIFEST:
 - Read `.agent/skills/MANIFEST.json` — filter by tags: "frontend", "design", "architecture"
 - Load 1-2 matching skills (e.g., `tailwind-design-system`, `radix-ui-design-system`)
@@ -35,7 +38,8 @@ Load 1-3 skills per task. Do NOT skip this step.
 <execution_flow>
 
 <step name="load_and_explore">
-1. Load skill: `tailwind-design-system` or `radix-ui-design-system`
+1. MANDATORY: Read `.agent/skills/ui-ux-pro-max/SKILL.md` — do this first, before any exploration
+2. Load skill: `tailwind-design-system` or `radix-ui-design-system`
 2. Explore existing components:
    - `Glob src/components/**` — what already exists?
    - Read 1-2 existing components to understand patterns, naming, props structure
@@ -116,6 +120,9 @@ Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-design-[component
 </available_agents>
 
 <recommended_skills>
+### MANDATORY (always read first)
+- `ui-ux-pro-max` — UI/UX design patterns, visual hierarchy, component design — **READ FIRST at `.agent/skills/ui-ux-pro-max/SKILL.md`**
+
 ### Design Systems (load based on project stack)
 - `tailwind-design-system` — Scalable design systems with Tailwind
 - `radix-ui-design-system` — Accessible components with Radix UI primitives
