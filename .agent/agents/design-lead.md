@@ -100,7 +100,7 @@ If BLOCK: Frontend Developer fixes accessibility issues, re-check before returni
 </step>
 
 <step name="write_summary">
-Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-design-[component].md`:
+Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-design-[component].md`:
 - Component created + file path
 - Design decisions made (patterns chosen, why)
 - Pencil file reference if created
@@ -147,7 +147,7 @@ Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-design-[component
 **Design:** [Pencil file OR spec location]
 **States:** loading ✓ / empty ✓ / error ✓ / success ✓
 **WCAG:** PASS ✓
-**Session summary:** `.claude/memory/sessions/[date]-design-[component].md`
+**Session summary:** `docs/08-agents_work/sessions/[date]-design-[component].md`
 
 ---
 

@@ -18,12 +18,12 @@ Thank you for contributing to the Green Startup Academy Startup Kit!
 ### Documentation
 
 - **README:** Keep the root README GSA-focused; skills docs live in `.agent/skills/`
-- **Hebrew docs:** `docs/GETTING_STARTED.md` — improve onboarding for כפר הירוק students
-- **Quick reference:** Update `docs/QUICK_REFERENCE.md` when adding commands or agents
+- **Hebrew docs:** `guides/GETTING_STARTED.md` — improve onboarding for כפר הירוק students
+- **Quick reference:** Update `guides/QUICK_REFERENCE.md` when adding commands or agents
 
 ### Workflow Bundles
 
-- **Workflow bundles:** Document in `docs/workflow-bundles.md` and `.agent/skills/docs/WORKFLOWS.md`
+- **Workflow bundles:** Document in `guides/workflow-bundles.md` and `.agent/skills/docs/WORKFLOWS.md`
 
 ## Pull Request Process
 

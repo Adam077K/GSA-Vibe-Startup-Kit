@@ -72,7 +72,7 @@ Never report data without a basic reasonableness check.
 </step>
 
 <step name="write_summary">
-Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-data-[task].md`:
+Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-data-[task].md`:
 - Data question answered
 - Queries written (with file paths)
 - Key numbers found
@@ -108,7 +108,7 @@ Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-data-[task].md`:
 **Task:** [what was built/queried]
 **Files:** [query files / schema changes]
 **Key results:** [summary of findings with sanity check]
-**Session summary:** `.claude/memory/sessions/[date]-data-[task].md`
+**Session summary:** `docs/08-agents_work/sessions/[date]-data-[task].md`
 
 ---
 

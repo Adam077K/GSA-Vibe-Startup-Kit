@@ -32,6 +32,7 @@ Load 1-3 skills per task. Do NOT skip this step.
 Load both SKILL.md files before starting.
 
 **Prior research:** Read `.claude/memory/USER-INSIGHTS.md` before dispatching. Don't duplicate existing research.
+**Docs:** Write competitive findings to `docs/02-competitive/` — update `LANDSCAPE.md`, `POSITIONING.md`, or create competitor profiles in `docs/02-competitive/competitors/`. Update `docs/COMPETITIVE_RESEARCH.md` with executive summary.
 </project_context>
 
 <execution_flow>
@@ -87,7 +88,7 @@ If user/market insights found:
 </step>
 
 <step name="write_summary">
-Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-research-[topic].md`:
+Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-research-[topic].md`:
 - Research question
 - Key findings (with sources)
 - Implications
@@ -169,7 +170,7 @@ Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-research-[topic].
 - [ ] Every finding has a source URL
 - [ ] Confidence levels assigned to all findings (HIGH/MEDIUM/LOW)
 - [ ] USER-INSIGHTS.md updated if user/market insights found
-- [ ] Session summary written to .claude/memory/sessions/
+- [ ] Session summary written to docs/08-agents_work/sessions/
 - [ ] Gaps documented (what's still unknown)
 </success_criteria>
 

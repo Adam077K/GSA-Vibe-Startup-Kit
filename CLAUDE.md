@@ -85,6 +85,28 @@ Vector DB:  Pinecone (prod) / pgvector (early)
 | `.claude/memory/sessions/` | Team lead session summaries (YYYY-MM-DD-[lead]-[task].md) | Each team lead |
 | `.claude/memory/specs/` | Product specs written by Product Lead | Product Lead |
 
+## Project Documentation (docs/)
+
+All startup project documentation lives in `docs/`. Agents **must** read and update the relevant file for their domain.
+
+| Folder / File | Purpose | Owner |
+|---------------|---------|-------|
+| `docs/PRD.md` | Master product requirements | product-lead |
+| `docs/BACKLOG.md` | Prioritized task backlog | product-lead, ceo |
+| `docs/ENGINEERING_PRINCIPLES.md` | Code conventions + tech decisions | build-lead |
+| `docs/COMPETITIVE_RESEARCH.md` | Competitive intelligence summary | research-lead |
+| `docs/01-foundation/` | Vision, business model, target market, personas | ceo, business-lead |
+| `docs/02-competitive/` | Landscape, positioning, moat, competitor profiles | research-lead |
+| `docs/03-system-design/` | Architecture, stack, DB schema, API contracts, ADRs | build-lead |
+| `docs/04-features/` | Roadmap, user stories, feature specs | product-lead |
+| `docs/05-marketing/` | GTM, messaging, SEO, channels | growth-lead |
+| `docs/06-codebase/` | Code map, conventions, patterns, tech debt | code-reviewer |
+| `docs/07-history/` | Changelog, decisions, pivots, milestones | ceo, all leads |
+| `docs/08-agents_work/` | Task index, session logs, handoffs | ceo, all leads |
+| `docs/09-metrics/` | North star, growth metrics, unit economics | business-lead, data-lead |
+
+**Template files** (copy + rename before filling): `_TEMPLATE.md` in `competitors/`, `adr/`, `specs/`, `sessions/`, `handoffs/`.
+
 ---
 
 ## MCPs

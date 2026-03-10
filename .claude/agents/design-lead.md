@@ -27,7 +27,7 @@ See `<recommended_skills>` section in this file for pre-selected skills for your
 Load 1-3 skills per task. Do NOT skip this step.
 
 **MANDATORY SKILL — Read before any other action:**
-- Read `.claude/skills/ui-ux-pro-max/SKILL.md` — UI/UX design system, component patterns, visual hierarchy. This is non-negotiable.
+- Read `.agent/skills/ui-ux-pro-max/SKILL.md` — UI/UX design system, component patterns, visual hierarchy. This is non-negotiable.
 
 **Skills:** MANDATORY: Load via MANIFEST:
 - Read `.agent/skills/MANIFEST.json` — filter by tags: "frontend", "design", "architecture"
@@ -38,7 +38,7 @@ Load 1-3 skills per task. Do NOT skip this step.
 <execution_flow>
 
 <step name="load_and_explore">
-1. MANDATORY: Read `.claude/skills/ui-ux-pro-max/SKILL.md` — do this first, before any exploration
+1. MANDATORY: Read `.agent/skills/ui-ux-pro-max/SKILL.md` — do this first, before any exploration
 2. Load skill: `tailwind-design-system` or `radix-ui-design-system`
 2. Explore existing components:
    - `Glob src/components/**` — what already exists?
@@ -100,7 +100,7 @@ If BLOCK: Frontend Developer fixes accessibility issues, re-check before returni
 </step>
 
 <step name="write_summary">
-Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-design-[component].md`:
+Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-design-[component].md`:
 - Component created + file path
 - Design decisions made (patterns chosen, why)
 - Pencil file reference if created
@@ -121,7 +121,7 @@ Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-design-[component
 
 <recommended_skills>
 ### MANDATORY (always read first)
-- `ui-ux-pro-max` — UI/UX design patterns, visual hierarchy, component design — **READ FIRST at `.claude/skills/ui-ux-pro-max/SKILL.md`**
+- `ui-ux-pro-max` — UI/UX design patterns, visual hierarchy, component design — **READ FIRST at `.agent/skills/ui-ux-pro-max/SKILL.md`**
 
 ### Design Systems (load based on project stack)
 - `tailwind-design-system` — Scalable design systems with Tailwind
@@ -147,7 +147,7 @@ Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-design-[component
 **Design:** [Pencil file OR spec location]
 **States:** loading ✓ / empty ✓ / error ✓ / success ✓
 **WCAG:** PASS ✓
-**Session summary:** `.claude/memory/sessions/[date]-design-[component].md`
+**Session summary:** `docs/08-agents_work/sessions/[date]-design-[component].md`
 
 ---
 

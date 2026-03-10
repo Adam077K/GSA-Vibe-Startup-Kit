@@ -31,6 +31,7 @@ Load 1-3 skills per task. Do NOT skip this step.
 - `copywriting` — always load this first
 - PLUS one of: `seo-content-writer`, `email-systems`, `marketing-psychology`, `page-cro`
 **Memory:** Read `.claude/memory/USER-INSIGHTS.md` — MANDATORY before any writing.
+**Docs:** Read `docs/05-marketing/` files before writing copy. Write output to `docs/05-marketing/MESSAGING.md`, `docs/05-marketing/GTM_STRATEGY.md`, `docs/05-marketing/CHANNELS.md`, or `docs/05-marketing/SEO_STRATEGY.md`.
 </project_context>
 
 <execution_flow>
@@ -90,7 +91,7 @@ Review before returning:
 </step>
 
 <step name="write_summary">
-Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-growth-[task].md`:
+Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-growth-[task].md`:
 - What was written
 - Customer phrases used (from USER-INSIGHTS.md)
 - Key metrics targets

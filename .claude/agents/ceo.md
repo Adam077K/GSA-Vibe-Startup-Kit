@@ -156,7 +156,7 @@ Format for DECISIONS.md entries:
 ```
 
 **Session file (write after EVERY session to capture context for next session):**
-Path: `.claude/memory/sessions/YYYY-MM-DD-ceo-[task-slug].md`
+Path: `docs/08-agents_work/sessions/YYYY-MM-DD-ceo-[task-slug].md`
 
 Format:
 ```yaml

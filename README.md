@@ -39,14 +39,14 @@ into your current project folder.
 npx gsa-startup-kit --claude --global
 ```
 Installs agents and commands into `~/.claude/` — Claude Code uses them automatically in every project.
-See [docs/GLOBAL_SETUP.md](docs/GLOBAL_SETUP.md) for manual setup instructions.
+See [guides/GLOBAL_SETUP.md](guides/GLOBAL_SETUP.md) for manual setup instructions.
 
 ---
 
 ## For Green Startup Academy (כפר הירוק)
 
-- [Getting Started](docs/GETTING_STARTED.md) — Full onboarding
-- [Quick Reference](docs/QUICK_REFERENCE.md) — One-pager cheat sheet
+- [Getting Started](guides/GETTING_STARTED.md) — Full onboarding
+- [Quick Reference](guides/QUICK_REFERENCE.md) — One-pager cheat sheet
 - Slash commands: `/build` `/fix` `/design` `/review` `/daily` `/plan` `/ship` `/audit` `/research`
 - [Agent team](AGENTS.md)
 
@@ -85,7 +85,7 @@ See [AGENTS.md](AGENTS.md) for the full routing table and examples.
 
 - Browse: [.agent/skills/README.md](.agent/skills/README.md)
 - Bundles: [.agent/skills/docs/BUNDLES.md](.agent/skills/docs/BUNDLES.md)
-- Workflows: [docs/workflow-bundles.md](docs/workflow-bundles.md)
+- Workflows: [guides/workflow-bundles.md](guides/workflow-bundles.md)
 
 ## Requirements
 

@@ -33,6 +33,7 @@ Load 1-3 skills per task. Do NOT skip this step.
 - `market-sizing-analysis` — for TAM/SAM/SOM
 Load 1-2 most relevant.
 **Memory:** Read `.claude/memory/DECISIONS.md` — what financial decisions are already made?
+**Docs:** Read `docs/01-foundation/BUSINESS_MODEL.md` + `docs/09-metrics/UNIT_ECONOMICS.md` before any financial work. Update those files with findings.
 </project_context>
 
 <execution_flow>
@@ -97,7 +98,7 @@ Update `.claude/memory/DECISIONS.md` if a decision was made:
 **Key assumptions:** [List]
 ```
 
-Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-business-[topic].md`.
+Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-business-[topic].md`.
 </step>
 
 </execution_flow>

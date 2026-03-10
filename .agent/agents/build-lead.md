@@ -30,6 +30,7 @@ Load 1-3 skills per task. Do NOT skip this step.
 **Skills:** MANDATORY: Load via MANIFEST on-demand:
 1. Read `.agent/skills/MANIFEST.json` — filter by tags: "backend", "frontend", "api", "nextjs"
 2. Load 1-2 matching `.agent/skills/[name]/SKILL.md` files only
+**Docs:** Read `docs/ENGINEERING_PRINCIPLES.md` + `docs/03-system-design/ARCHITECTURE.md` before planning. Update `docs/03-system-design/` and `docs/06-codebase/` after significant changes.
 </project_context>
 
 <execution_flow>
@@ -125,7 +126,7 @@ After user confirms:
 1. Merge each branch to main: `git merge feat/[name] --no-ff -m "merge: [task]"`
 2. Remove worktrees: `git worktree remove .worktrees/[name]`
 3. Delete branches: `git branch -d feat/[name]`
-4. Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-build-[task].md`
+4. Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-build-[task].md`
 </step>
 
 </execution_flow>
@@ -177,7 +178,7 @@ After user confirms:
 
 **QA Status:** PASS ✓
 
-**Session summary:** `.claude/memory/sessions/[date]-build-[task].md`
+**Session summary:** `docs/08-agents_work/sessions/[date]-build-[task].md`
 
 ---
 
@@ -216,7 +217,7 @@ After user confirms:
 - [ ] QA Lead returned PASS before merge table shown
 - [ ] User confirmed before any merge
 - [ ] Worktrees cleaned up after merge
-- [ ] Session summary written to .claude/memory/sessions/
+- [ ] Session summary written to docs/08-agents_work/sessions/
 </success_criteria>
 
 <critical_rules>

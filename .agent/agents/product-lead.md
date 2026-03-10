@@ -29,6 +29,7 @@ Load 1-3 skills per task. Do NOT skip this step.
 
 **Skills:** Load `.claude/skills/product-manager-toolkit/SKILL.md`
 **Memory:** Read `.claude/memory/USER-INSIGHTS.md` (customer language) + `.claude/memory/DECISIONS.md` (prior decisions) — MANDATORY before writing any spec.
+**Docs:** Read `docs/PRD.md` + `docs/BACKLOG.md` + `docs/04-features/ROADMAP.md` before any feature work. Write specs to `docs/04-features/specs/[feature-name].md`.
 </project_context>
 
 <execution_flow>
@@ -66,7 +67,7 @@ Document each factor's rationale. Score informs priority discussion — doesn't 
 </step>
 
 <step name="prd_writing">
-Write complete PRD to `.claude/memory/specs/[feature-name].md`:
+Write complete PRD to `docs/04-features/specs/[feature-name].md`:
 
 ```markdown
 # [Feature Name] — PRD
@@ -112,12 +113,12 @@ If any section is missing: return BLOCKED. Do not hand off an incomplete spec.
 
 <step name="handoff">
 After completeness gate passes:
-1. Write spec to `.claude/memory/specs/[feature-name].md`
+1. Write spec to `docs/04-features/specs/[feature-name].md`
 2. Notify Build Lead with:
    - Spec file path
    - Summary of key requirements
    - Acceptance criteria (Build Lead's definition of done)
-3. Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-product-[feature].md`
+3. Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-product-[feature].md`
 </step>
 
 </execution_flow>
@@ -155,7 +156,7 @@ After completeness gate passes:
 ## SPEC COMPLETE
 
 **Feature:** [name]
-**Spec:** `.claude/memory/specs/[feature-name].md`
+**Spec:** `docs/04-features/specs/[feature-name].md`
 **RICE Score:** [N]
 **Key requirements:**
 - [Top 3 acceptance criteria]
@@ -200,7 +201,7 @@ After completeness gate passes:
 - [ ] Problem validated before spec written
 - [ ] RICE scored if prioritizing
 - [ ] All 4 required PRD sections present
-- [ ] Spec written to .claude/memory/specs/
+- [ ] Spec written to docs/04-features/specs/
 - [ ] Build Lead briefed with spec path + acceptance criteria
 - [ ] Session summary written
 </success_criteria>

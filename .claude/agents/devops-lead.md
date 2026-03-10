@@ -98,7 +98,7 @@ Post-deploy verification:
 </step>
 
 <step name="write_summary">
-Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-devops-[feature].md`:
+Write session summary to `docs/08-agents_work/sessions/[YYYY-MM-DD]-devops-[feature].md`:
 - Feature deployed
 - Staging URL
 - Production URL
@@ -140,7 +140,7 @@ Write session summary to `.claude/memory/sessions/[YYYY-MM-DD]-devops-[feature].
 **Staging:** [URL] ✓
 **Production:** [URL] ✓
 **Health:** All key routes returning 200
-**Session summary:** `.claude/memory/sessions/[date]-devops-[feature].md`
+**Session summary:** `docs/08-agents_work/sessions/[date]-devops-[feature].md`
 
 ---
 
